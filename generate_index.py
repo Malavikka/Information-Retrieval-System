@@ -11,6 +11,7 @@ import pandas as pd
 import numpy as np
 from os import walk
 from BTrees.OOBTree import OOBTree
+from collections import deque
 
 # %%
 # BTree module usage:
@@ -69,7 +70,74 @@ for doc in doc_file_mapping:
                 standard_inverted_index.update({term:{docID:[pos]}})
 
 # %%
+# Permuterm index : 
+#   For each term we add $ and rotate it to create permuterms, and add this into a BTree
+#   Key = Permuterm, value = original term
+#   Eg : term = hello | permuterms = hello$,ello$h,llo$he,lo$hel,o$hell
 
 # %%
+# for a single document
+# initialise the object-object btree
+permuterm_index = OOBTree()
+filename = "BBCNEWS.201701.csv"
+df = pd.read_csv("./Processed_dataset/"+filename)
+for text in df["Snippet"]:
+    for term in text.split():
+        # add $ to the end of term as special character to create permuterm
+        x = len(term)
+        permuterm = term+'$'
+        if not permuterm_index.has_key(permuterm):
+            # add all permuterms in a dictionary to point to term
+            d = {}
+            # method 1 : list splicing
+            for i in range(x):
+                d[permuterm] = term
+                permuterm = permuterm[1:]+permuterm[0]
+            # method 2 : deque rotations 
+            # dq = deque(permuterm)
+            # for i in range(x):
+            #     d[''.join(dq)]=term
+            #     dq.rotate(1)
+            #     if i==0:
+            #         dq.rotate(1)
+            # fill in the index by adding the permuterm-term mapping
+            permuterm_index.update(d)
 
+# %%
+# for all 418 documents
+files_list = []
+for i,j,k in walk("./Processed_dataset/"):
+    files_list.extend(k)
+# initialise the object-object btree
+permuterm_index = OOBTree()
+for filename in files_list:
+    df = pd.read_csv("./Processed_dataset/"+filename)
+    for text in df["Snippet"]:
+        for term in text.split():
+            # add $ to the end of term as special character to create permuterm
+            x = len(term)
+            permuterm = term+'$'
+            if not permuterm_index.has_key(permuterm):
+                # add all permuterms in a dictionary to point to term
+                d = {}
+                # method 1 of generating permuterms
+                for i in range(x):
+                    d[permuterm] = term
+                    permuterm = permuterm[1:]+permuterm[0]
+                # method 2 of generating permuterms
+                # dq = deque(permuterm)
+                # for i in range(x):
+                #     d[''.join(dq)] = term
+                #     dq.rotate(1)
+                #     if i==0:
+                #         dq.rotate(1)
+                # fill in the index by adding the permuterm-term mapping
+                permuterm_index.update(d)
+
+# %%
+x = list(permuterm_index.items())
+x
+    
+# %%
+# todo : time the method 1 and 2 of permuterm generation and see which is faster... By general overview, both seem to more or less take the same time.
 # %%
