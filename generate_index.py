@@ -12,6 +12,7 @@ import numpy as np
 from os import walk
 from BTrees.OOBTree import OOBTree
 from collections import deque
+import math
 
 # %%
 # BTree module usage:
@@ -45,8 +46,9 @@ for row,text in enumerate(df["Snippet"]):
 # To display index :
 x = list(index.items())
 x
+
 # %%
-# Index for all 418 files together :
+# Index for all 417 files together :
 files_list = []
 for i,j,k in walk("./Processed_dataset/"):
     files_list.extend(k)
@@ -68,6 +70,34 @@ for doc in doc_file_mapping:
                     standard_inverted_index[term][docID] = [pos]
             else:
                 standard_inverted_index.update({term:{docID:[pos]}})
+
+#%%
+# Cell to calculate the TF-IDF scores.
+# Term Frequency = 1 + log to the base 10 of number of occurances of the term in a document
+# Inverse Document Frequency = log to the base 10 of (N/df)  
+
+def find_no_of_files(arr):
+    s = set(arr)
+    return len(s)
+
+for key,value in standard_inverted_index.items():
+    file_arr = list()
+    no_of_occurrances = 0
+    for new_key,new_value in value.items():
+        temp_arr = new_key.split("_")
+        file_arr.append(int(temp_arr[0]))
+        no_of_occurrances = no_of_occurrances + len(new_value)
+    no_of_files = find_no_of_files(file_arr)
+    tf = 1 + math.log10(no_of_occurrances)
+    idf = math.log10(417/no_of_files)
+    tf_idf = tf * idf
+    #print(key , "TF-IDF Score is : " , tf_idf)
+    standard_inverted_index[key]["tf-idf"] = tf_idf
+
+#%%
+
+z = list(standard_inverted_index.items())
+z
 
 # %%
 # Permuterm index : 
