@@ -96,8 +96,12 @@ for key,value in standard_inverted_index.items():
 
 #%%
 
-z = list(standard_inverted_index.items())
-z
+#z = list(standard_inverted_index.items())
+#z
+vocab = list()
+for key,value in standard_inverted_index.items():
+    vocab.append(key)
+vocab
 
 # %%
 # Permuterm index : 
