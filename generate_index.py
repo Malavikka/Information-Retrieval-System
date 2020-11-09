@@ -49,6 +49,7 @@ x
 
 # %%
 # Index for all 417 files together :
+my_inverted_index = dict() #
 files_list = []
 for i,j,k in walk("./Processed_dataset/"):
     files_list.extend(k)
@@ -61,6 +62,8 @@ for doc in doc_file_mapping:
     df = pd.read_csv("./Processed_dataset/"+doc_file_mapping[doc])
     print(doc_file_mapping[doc])
     for row,text in enumerate(df["Snippet"]):
+        if(doc not in my_inverted_index): #
+            my_inverted_index[doc] = list() #
         docID = str(doc)+'_'+str(row)
         for pos,term in enumerate(text.split()):
             if standard_inverted_index.has_key(term):
@@ -70,6 +73,7 @@ for doc in doc_file_mapping:
                     standard_inverted_index[term][docID] = [pos]
             else:
                 standard_inverted_index.update({term:{docID:[pos]}})
+                my_inverted_index[doc].append(term) #
 
 #%%
 # Cell to calculate the TF-IDF scores.
@@ -79,6 +83,18 @@ for doc in doc_file_mapping:
 def find_no_of_files(arr):
     s = set(arr)
     return len(s)
+
+def normalize_the_score(standard_inverted_index,my_inverted_index):
+    for key,value in my_inverted_index.items():
+        denominator = 0
+        for term in value:
+            term_TfIdf = standard_inverted_index[term]["tf-idf"]
+            term_TfIdf = math.pow(term_TfIdf,2)
+            denominator = denominator + term_TfIdf
+        normalized_denominator = math.sqrt(denominator)
+        for term in value:
+            standard_inverted_index[term]["tf-idf"] = standard_inverted_index[term]["tf-idf"]/normalized_denominator
+            standard_inverted_index[term]["tf-idf"] = round(standard_inverted_index[term]["tf-idf"],5)
 
 for key,value in standard_inverted_index.items():
     file_arr = list()
@@ -94,14 +110,17 @@ for key,value in standard_inverted_index.items():
     #print(key , "TF-IDF Score is : " , tf_idf)
     standard_inverted_index[key]["tf-idf"] = tf_idf
 
+normalize_the_score(standard_inverted_index,my_inverted_index)
+
 #%%
 
-#z = list(standard_inverted_index.items())
-#z
-vocab = list()
-for key,value in standard_inverted_index.items():
-    vocab.append(key)
-vocab
+z = list(standard_inverted_index.items())
+z
+
+#vocab = list()
+#for key,value in standard_inverted_index.items():
+#    vocab.append(key)
+#vocab
 
 # %%
 # Permuterm index : 
