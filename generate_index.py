@@ -13,6 +13,7 @@ from os import walk
 from BTrees.OOBTree import OOBTree
 from collections import deque
 import math
+from spellchecker import SpellChecker
 
 # %%
 # BTree module usage:
@@ -74,6 +75,16 @@ for doc in doc_file_mapping:
             else:
                 standard_inverted_index.update({term:{docID:[pos]}})
                 my_inverted_index[doc].append(term) #
+#%%
+#Spell checking on vocab
+terms = list(standard_inverted_index.keys())
+for i in terms:
+    spell = SpellChecker()
+    # find those words that may be misspelled
+    print(spell.correction(i))
+    # Get a list of `likely` options - uncomment 
+    # print(word+' ->', spell.candidates(word))
+    
 
 #%%
 # Cell to calculate the TF-IDF scores.
