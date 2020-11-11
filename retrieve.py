@@ -45,7 +45,7 @@ doc_file_mapping = {pos:val for pos,val in enumerate(files_list)}
 standard_inverted_index = OOBTree()
 # fill index
 for doc in doc_file_mapping:
-    df = pd.read_csv("./Processed_dataset/"+doc_file_mapping[doc])
+    df = pd.read_csv("./New_Processed_data/"+doc_file_mapping[doc])
     print(doc_file_mapping[doc])
     for row,text in enumerate(df["Snippet"]):
         if(doc not in my_inverted_index): #
@@ -119,8 +119,6 @@ def gen_vector(tokens):
     
     counter = Counter(tokens)
     words_count = len(tokens)
-
-    query_weights = {}
     
     for token in np.unique(tokens):
         
@@ -155,7 +153,9 @@ def cosine_similarity(k, tokens):
     
     print(out)
     for i in out:
-        print(i, dataset[i][0])
+        print("Filename : " , doc_file_mapping[i])
+
+#%%
 
 query = input("Enter your Query")
 tokens = preprocess(query)
