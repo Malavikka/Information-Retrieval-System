@@ -44,7 +44,7 @@ for file in os.listdir(directory):
         print("Filename : " , filename)
         df = pd.read_csv('./Dataset/' + filename, index_col=None)
         df.drop(columns = ['URL', 'MatchDateTime', 'IAShowID', 'IAPreviewThumb'], inplace = True)
-        df.head()
+        #df.head()
         # Iterating over every row of the "Snippet" column and pre-processing it.
         for i in range(len(df['Snippet'])):
             df['Snippet'][i] = clean_the_string(df['Snippet'][i])
