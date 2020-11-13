@@ -11,6 +11,9 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem.porter import PorterStemmer
 from collections import Counter
+from spell_check import *
+# import nltk
+# nltk.download('stopwords')
 
 #%%
 def preprocess(sentence):
@@ -136,7 +139,7 @@ def gen_vector(tokens):
 def cosine_similarity(k, tokens):
     print("Cosine Similarity")
     
-    print("\nQuery:", query)
+    print("\nQuery:", corrected_query)
     print("")
     #print(tokens)
     
@@ -158,7 +161,9 @@ def cosine_similarity(k, tokens):
 #%%
 
 query = input("Enter your Query")
-tokens = preprocess(query)
+corrected_query = spell_correct_context(query)
+# print(corrected_query)
+tokens = preprocess(corrected_query)
 Q = cosine_similarity(10,tokens)
 
 

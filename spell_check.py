@@ -6,13 +6,14 @@ def spell_correct_context(query_str):
     corrector.LoadLangModel('/home/malavikka/Desktop/AIR_proj/Information-Retrieval-System/en.bin')  
     list_of_words = get_list(query_str)
     #PRINTING THE CANDIDATES 
-    for i in range(len(list_of_words)):
-        print(list_of_words[i]+" -> ", corrector.GetCandidates(list_of_words, i))
-    print("Did you mean " + "'"+corrector.FixFragment(query_str)+ "'"+"?")
+    # for i in range(len(list_of_words)):
+        # print(list_of_words[i]+" -> ", corrector.GetCandidates(list_of_words, i))
+    #print("Did you mean " + "'"+corrector.FixFragment(query_str)+ "'"+"?")
+    return corrector.FixFragment(query_str)
 
 def spell_correct(query_str):
     spell = SpellChecker()
-# find those words that may be misspelled
+    # find those words that may be misspelled
     list_of_words = get_list(query_str)
     new_str = ""
     for word in list_of_words:
