@@ -34,6 +34,7 @@ def preprocess(sentence):
     cleaned_sentence = [stemmer.stem(word) for word in cleaned_sentence]
 
     #cleaned_sentence = ' '.join(cleaned_sentence)
+    print('clean:', cleaned_sentence)
     return cleaned_sentence
 
 #%%
@@ -49,7 +50,7 @@ standard_inverted_index = OOBTree()
 # fill index
 for doc in doc_file_mapping:
     df = pd.read_csv("./New_Processed_data/"+doc_file_mapping[doc])
-    print(doc_file_mapping[doc])
+    # print(doc_file_mapping[doc])
     for row,text in enumerate(df["Snippet"]):
         if(doc not in my_inverted_index): #
             my_inverted_index[doc] = list() #
@@ -98,8 +99,8 @@ for key,value in standard_inverted_index.items():
 #normalize_the_score(standard_inverted_index,my_inverted_index)
 
 #%%
-standard_inverted_index = list(standard_inverted_index.items())
-standard_inverted_index
+standard_inverted_index_list = list(standard_inverted_index.items())
+standard_inverted_index_list
 
 #%%
 def cosine_sim(a, b):
@@ -110,8 +111,8 @@ def cosine_sim(a, b):
 D = np.zeros((417, len(standard_inverted_index)))
 for i in standard_inverted_index:
     try:
-        ind = standard_inverted_index.index(i)
-        D[i[0]][ind] = standard_inverted_index[i]["tf-idf"]
+        ind = list(standard_inverted_index.keys()).index(i)
+        D[i][ind] = standard_inverted_index[i]["tf-idf"]
     except:
         pass
 
@@ -124,13 +125,14 @@ def gen_vector(tokens):
     words_count = len(tokens)
     
     for token in np.unique(tokens):
-        
+        print("1",token)
         #tf = counter[token]/words_count
         #df = doc_freq(token)
         #idf = math.log((N+1)/(df+1))
         if(token in standard_inverted_index):
-            ind = standard_inverted_index.index(token)
+            ind = list(standard_inverted_index.keys()).index(token)
             Q[ind] = standard_inverted_index[token]["tf-idf"]
+            print(token)
         else:
             pass
 
@@ -146,6 +148,7 @@ def cosine_similarity(k, tokens):
     d_cosines = []
     
     query_vector = gen_vector(tokens)
+    print('query_vec:',query_vector)
     
     for d in D:
         d_cosines.append(cosine_sim(query_vector, d))
@@ -167,4 +170,6 @@ tokens = preprocess(corrected_query)
 Q = cosine_similarity(10,tokens)
 
 
+# %%
+list(gen_vector(['hello'])) == list(gen_vector(['bye']))
 # %%
