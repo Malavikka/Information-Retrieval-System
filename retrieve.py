@@ -11,6 +11,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem.porter import PorterStemmer
 from collections import Counter
+import time
 from spell_check import *
 # import nltk
 # nltk.download('stopwords')
@@ -39,7 +40,7 @@ def preprocess(sentence):
 
 #%%
 # Index for all 417 files together :
-my_inverted_index = dict() #
+# my_inverted_index = dict() #
 files_list = []
 for i,j,k in walk("./New_Processed_data/"):
     files_list.extend(k)
@@ -48,13 +49,19 @@ doc_file_mapping = {pos:val for pos,val in enumerate(files_list)}
 # use object-object BTree
 standard_inverted_index = OOBTree()
 # fill index
+row_vector_mapping = {}
+rev_row_vector_mapping = {}
+no_of_docs = 0
 for doc in doc_file_mapping:
     df = pd.read_csv("./New_Processed_data/"+doc_file_mapping[doc])
     # print(doc_file_mapping[doc])
     for row,text in enumerate(df["Snippet"]):
-        if(doc not in my_inverted_index): #
-            my_inverted_index[doc] = list() #
+        # if(doc not in my_inverted_index): #
+        #     my_inverted_index[doc] = list() #
         docID = str(doc)+'_'+str(row)
+        row_vector_mapping[docID] = no_of_docs
+        rev_row_vector_mapping[no_of_docs] = docID
+        no_of_docs += 1
         for pos,term in enumerate(text.split()):
             if standard_inverted_index.has_key(term):
                 if docID in standard_inverted_index[term]:
@@ -63,16 +70,32 @@ for doc in doc_file_mapping:
                     standard_inverted_index[term][docID] = [pos]
             else:
                 standard_inverted_index.update({term:{docID:[pos]}})
-                my_inverted_index[doc].append(term) #
+                # my_inverted_index[doc].append(term) #
 
 #%%
 # tf-idf vector calculation
 
 keys = list(standard_inverted_index.keys())
-D = np.zeros((417, len(standard_inverted_index)))
+term_index_map = {j:i for i,j in enumerate(keys)}
+
+docs = {}#np.zeros((no_of_docs, len(standard_inverted_index)))
 for key,value in standard_inverted_index.items():
+    # calculate df
+    df = len(value)
+    for docID,pos in value.items():
+        tf = len(pos)
+        idf = math.log10(no_of_docs/df)
+        tf_idf = tf * idf
+        # filling up the tf-idf vectors (docs)
+        if row_vector_mapping[docID] in docs:
+            docs[row_vector_mapping[docID]][key] = tf_idf
+        else:
+            docs[row_vector_mapping[docID]] = {key : tf_idf}
+        #print(key , "TF-IDF Score is : " , tf_idf)
+
+
     # a set containing all unique files with the key
-    file_arr = set()
+    """ file_arr = set()
     no_of_occurrances = 0
     for new_key,new_value in value.items():
         temp_arr = new_key.split("_")
@@ -89,7 +112,7 @@ for key,value in standard_inverted_index.items():
     for doc in file_arr:
         D[doc-1][ind] = tf_idf
     #print(key , "TF-IDF Score is : " , tf_idf)
-    standard_inverted_index[key]["tf-idf"] = tf_idf
+    standard_inverted_index[key]["tf-idf"] = tf_idf """
 
 
 #%%
@@ -102,22 +125,44 @@ def gen_vector(tokens):
 
     Q = np.zeros((len(standard_inverted_index)))
     
-    # counter = Counter(tokens)
-    # words_count = len(tokens)
+    counter = Counter(tokens)
     
     for token in np.unique(tokens):
-        print("1",token)
-        #tf = counter[token]/words_count
-        #df = doc_freq(token)
-        #idf = math.log((N+1)/(df+1))
+        # print("1",token)
+        tf = counter[token]
+        df = len(standard_inverted_index[token])
+        idf = math.log10(no_of_docs/df)
         if(token in standard_inverted_index):
-            ind = list(standard_inverted_index.keys()).index(token)
-            Q[ind] = standard_inverted_index[token]["tf-idf"]
+            ind = term_index_map[token]
+            Q[ind] = tf * idf
             print(token)
         else:
             pass
 
     return Q
+
+#%%
+def gen_vec(query,each_doc):
+    keys = docs[each_doc].keys()
+    tokens = set(query) | set(keys)
+    query_vector = np.zeros((len(tokens)))
+    doc_vector = np.zeros((len(tokens)))
+    l_tokens = list(sorted(tokens))
+
+    counter = Counter(tokens)
+        
+    for i,j in enumerate(l_tokens):
+        if j in query:
+            tf = counter[j]
+            df = len(standard_inverted_index[j])
+            idf = math.log10(no_of_docs/df)
+            query_vector[i] = tf * idf
+        if j in keys:
+            doc_vector[i] = docs[each_doc][j]
+
+    return query_vector,doc_vector
+
+
 #%%
 def cosine_similarity(k, tokens):
     print("Cosine Similarity")
@@ -126,26 +171,44 @@ def cosine_similarity(k, tokens):
     print("")
     #print(tokens)
     
-    d_cosines = []
+    d_cosines = np.zeros((no_of_docs))
     
-    query_vector = gen_vector(tokens)
+    """ query_vector = gen_vector(tokens)
     print('query_vec:',query_vector)
     
-    for d in D:
-        d_cosines.append(cosine_sim(query_vector, d))
-        
-    out = np.array(d_cosines).argsort()[-k:][::-1]
+    for each_doc in docs: #10^5
+        doc_vec = np.zeros((len(standard_inverted_index)))
+        for term in docs[each_doc]: #10 ^ 1
+            ind = term_index_map[term] #10^
+            doc_vec[ind] = docs[each_doc][term]
+        d_cosines[each_doc] = cosine_sim(query_vector, doc_vec) """
     
+        
+    for each_doc in docs:
+        query_vector,doc_vec = gen_vec(tokens,each_doc)
+        d_cosines[each_doc] = cosine_sim(query_vector, doc_vec)
+   
+
+    out = np.array(d_cosines).argsort()[-k:][::-1]
+    scores = sorted(np.array(d_cosines))[-k:][::-1]
     print("")
     
     print(out)
-    for i in out:
-        print("Filename : " , doc_file_mapping[i])
+    for i,j in zip(out,scores):
+        # print("line : ", i)
+        doc,row = map(int,rev_row_vector_mapping[i].split('_'))
+        print("Filename : " , doc_file_mapping[doc],doc,row,j)
 
 #%%
 
+start_time = time.time()
 query = input("Enter your Query")
-corrected_query = spell_correct_context(query)
+# corrected_query = spell_correct_context(query)
 # print(corrected_query)
+corrected_query = query
 tokens = preprocess(corrected_query)
 cosine_similarity(10,tokens)
+end_time = time.time()
+print('time:',end_time-start_time)
+
+# %%
