@@ -137,7 +137,7 @@ z
 # Permuterm index : 
 #   For each term we add $ and rotate it to create permuterms, and add this into a BTree
 #   Key = Permuterm, value = original term
-#   Eg : term = hello | permuterms = hello$,ello$h,llo$he,lo$hel,o$hell
+#   Eg : term = hello | permuterms = hello$,ello$h,llo$he,lo$hel,o$hell,$hello
 
 # %%
 # for a single document
@@ -154,7 +154,7 @@ for text in df["Snippet"]:
             # add all permuterms in a dictionary to point to term
             d = {}
             # method 1 : list splicing
-            for i in range(x):
+            for i in range(x+1):
                 d[permuterm] = term
                 permuterm = permuterm[1:]+permuterm[0]
             # method 2 : deque rotations 
@@ -185,7 +185,7 @@ for filename in files_list:
                 # add all permuterms in a dictionary to point to term
                 d = {}
                 # method 1 of generating permuterms
-                for i in range(x):
+                for i in range(x+1):
                     d[permuterm] = term
                     permuterm = permuterm[1:]+permuterm[0]
                 # method 2 of generating permuterms
@@ -204,4 +204,41 @@ x
     
 # %%
 # todo : time the method 1 and 2 of permuterm generation and see which is faster... By general overview, both seem to more or less take the same time.
+
+# %%
+# wildcard queries
+def query_func(perm_tree, index_tree, query):
+    if '*' not in query:
+        return [query]
+    splits = query.split('*')
+    # for *X*, finding X*
+    if query[0] == query[-1] == '*':
+        min_query = splits[1]
+        max_query = splits[1][:-1] + chr(ord(splits[1][-1])+1)
+        words = list(permuterm_index.items(min_query, max_query))
+        return words
+    # for *X, finding X$*
+    elif query[0] == '*':
+        min_query = splits[1] + '$'
+        max_query = splits[1] + 'z' #value needs updating
+        # print(splits,max_query)
+        words = list(permuterm_index.items(min_query, max_query))
+        return words
+    # for X*, finding $X*
+    elif query[-1] == '*':
+        min_query = '$'+ splits[0]
+        max_query = '$' + splits[0][:-1] + chr(ord(splits[0][-1])+1)
+        words = list(permuterm_index.items(min_query, max_query))
+        return words
+    # for X*Y, finding Y$X*
+    else:
+        min_query = splits[1] + '$' + splits[0]
+        max_query = splits[1] + '$' + splits[0][:-1] + chr(ord(splits[0][-1])+1)
+        words = list(permuterm_index.items(min_query, max_query))
+        return words
+
+
+query_func(permuterm_index, index, 'h*ful')
+
+
 # %%
