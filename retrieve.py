@@ -66,41 +66,31 @@ for doc in doc_file_mapping:
                 my_inverted_index[doc].append(term) #
 
 #%%
-def find_no_of_files(arr):
-    s = set(arr)
-    return len(s)
+# tf-idf vector calculation
 
-def normalize_the_score(standard_inverted_index,my_inverted_index):
-    for key,value in my_inverted_index.items():
-        denominator = 0
-        for term in value:
-            term_TfIdf = standard_inverted_index[term]["tf-idf"]
-            term_TfIdf = math.pow(term_TfIdf,2)
-            denominator = denominator + term_TfIdf
-        normalized_denominator = math.sqrt(denominator)
-        for term in value:
-            standard_inverted_index[term]["tf-idf"] = standard_inverted_index[term]["tf-idf"]/normalized_denominator
-            standard_inverted_index[term]["tf-idf"] = round(standard_inverted_index[term]["tf-idf"],5)
-
+keys = list(standard_inverted_index.keys())
+D = np.zeros((417, len(standard_inverted_index)))
 for key,value in standard_inverted_index.items():
-    file_arr = list()
+    # a set containing all unique files with the key
+    file_arr = set()
     no_of_occurrances = 0
     for new_key,new_value in value.items():
         temp_arr = new_key.split("_")
-        file_arr.append(int(temp_arr[0]))
+        file_arr.add(int(temp_arr[0]))
         no_of_occurrances = no_of_occurrances + len(new_value)
-    no_of_files = find_no_of_files(file_arr)
+    no_of_files = len(file_arr)
     tf = 1 + math.log10(no_of_occurrances)
     idf = math.log10(417/no_of_files)
     tf_idf = tf * idf
+    # filling up the tf-idf vectors (D)
+    ind = keys.index(key)
+    # since we have all the file ids with the term we can directly update the tf-idf vectors (D)
+    # -1 because file ids start from 1 to 417
+    for doc in file_arr:
+        D[doc-1][ind] = tf_idf
     #print(key , "TF-IDF Score is : " , tf_idf)
     standard_inverted_index[key]["tf-idf"] = tf_idf
 
-#normalize_the_score(standard_inverted_index,my_inverted_index)
-
-#%%
-standard_inverted_index_list = list(standard_inverted_index.items())
-standard_inverted_index_list
 
 #%%
 def cosine_sim(a, b):
@@ -108,21 +98,12 @@ def cosine_sim(a, b):
     return cos_sim
 
 #%%
-D = np.zeros((417, len(standard_inverted_index)))
-for i in standard_inverted_index:
-    try:
-        ind = list(standard_inverted_index.keys()).index(i)
-        D[i][ind] = standard_inverted_index[i]["tf-idf"]
-    except:
-        pass
-
-#%%
 def gen_vector(tokens):
 
     Q = np.zeros((len(standard_inverted_index)))
     
-    counter = Counter(tokens)
-    words_count = len(tokens)
+    # counter = Counter(tokens)
+    # words_count = len(tokens)
     
     for token in np.unique(tokens):
         print("1",token)
@@ -167,9 +148,4 @@ query = input("Enter your Query")
 corrected_query = spell_correct_context(query)
 # print(corrected_query)
 tokens = preprocess(corrected_query)
-Q = cosine_similarity(10,tokens)
-
-
-# %%
-list(gen_vector(['hello'])) == list(gen_vector(['bye']))
-# %%
+cosine_similarity(10,tokens)
