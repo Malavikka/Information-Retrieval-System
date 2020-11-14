@@ -12,7 +12,7 @@ from nltk.tokenize import word_tokenize
 from nltk.stem.porter import PorterStemmer
 from collections import Counter
 import time
-from spell_check import *
+#from spell_check import *
 # import nltk
 # nltk.download('stopwords')
 
@@ -40,7 +40,6 @@ def preprocess(sentence):
 
 #%%
 # Index for all 417 files together :
-# my_inverted_index = dict() #
 files_list = []
 for i,j,k in walk("./New_Processed_data/"):
     files_list.extend(k)
@@ -56,8 +55,6 @@ for doc in doc_file_mapping:
     df = pd.read_csv("./New_Processed_data/"+doc_file_mapping[doc])
     # print(doc_file_mapping[doc])
     for row,text in enumerate(df["Snippet"]):
-        # if(doc not in my_inverted_index): #
-        #     my_inverted_index[doc] = list() #
         docID = str(doc)+'_'+str(row)
         row_vector_mapping[docID] = no_of_docs
         rev_row_vector_mapping[no_of_docs] = docID
@@ -70,7 +67,61 @@ for doc in doc_file_mapping:
                     standard_inverted_index[term][docID] = [pos]
             else:
                 standard_inverted_index.update({term:{docID:[pos]}})
-                # my_inverted_index[doc].append(term) #
+
+#%%
+# Index for all 417 files together (Original) :
+files_list = []
+for i,j,k in walk("./Processed_dataset/"):
+    files_list.extend(k)
+# create document file mappings
+doc_file_mapping = {pos:val for pos,val in enumerate(files_list)}
+# use object-object BTree
+ori_inverted_index = OOBTree()
+# fill index
+row_vector_mapping = {}
+rev_row_vector_mapping = {}
+no_of_docs = 0
+for doc in doc_file_mapping:
+    df = pd.read_csv("./Processed_dataset/"+doc_file_mapping[doc])
+    # print(doc_file_mapping[doc])
+    for row,text in enumerate(df["Snippet"]):
+        docID = str(doc)+'_'+str(row)
+        row_vector_mapping[docID] = no_of_docs
+        rev_row_vector_mapping[no_of_docs] = docID
+        no_of_docs += 1
+        for pos,term in enumerate(text.split()):
+            if ori_inverted_index.has_key(term):
+                if docID in ori_inverted_index[term]:
+                    ori_inverted_index[term][docID].append(pos)
+                else:
+                    ori_inverted_index[term][docID] = [pos]
+            else:
+                ori_inverted_index.update({term:{docID:[pos]}})
+
+# %%
+# generate permuterm index
+
+files_list = []
+for i,j,k in walk("./Processed_dataset/"):
+    files_list.extend(k)
+# initialise the object-object btree
+permuterm_index = OOBTree()
+for filename in files_list:
+    df = pd.read_csv("./Processed_dataset/"+filename)
+    for text in df["Snippet"]:
+        for term in text.split():
+            # add $ to the end of term as special character to create permuterm
+            x = len(term)
+            permuterm = term+'$'
+            if not permuterm_index.has_key(permuterm):
+                # add all permuterms in a dictionary to point to term
+                d = {}
+                for i in range(x+1):
+                    d[permuterm] = term
+                    permuterm = permuterm[1:]+permuterm[0]
+                permuterm_index.update(d)
+
+
 
 #%%
 # tf-idf vector calculation
@@ -113,6 +164,36 @@ for key,value in standard_inverted_index.items():
         D[doc-1][ind] = tf_idf
     #print(key , "TF-IDF Score is : " , tf_idf)
     standard_inverted_index[key]["tf-idf"] = tf_idf """
+
+# %%
+# wildcard queries
+def query_func(perm_tree, index_tree, query):
+    splits = query.split('*')
+    # for *X*, finding X*
+    if query[0] == query[-1] == '*':
+        min_query = splits[1]
+        max_query = splits[1][:-1] + chr(ord(splits[1][-1])+1)
+        words = list(permuterm_index.items(min_query, max_query))
+    # for *X, finding X$*
+    elif query[0] == '*':
+        min_query = splits[1] + '$'
+        max_query = splits[1] + 'z' #value needs updating
+        # print(splits,max_query)
+        words = list(permuterm_index.items(min_query, max_query))
+    # for X*, finding $X*
+    elif query[-1] == '*':
+        min_query = '$'+ splits[0]
+        max_query = '$' + splits[0][:-1] + chr(ord(splits[0][-1])+1)
+        words = list(permuterm_index.items(min_query, max_query))
+    # for X*Y, finding Y$X*
+    else:
+        min_query = splits[1] + '$' + splits[0]
+        max_query = splits[1] + '$' + splits[0][:-1] + chr(ord(splits[0][-1])+1)
+        words = list(permuterm_index.items(min_query, max_query))
+    list_of_words = list(map(lambda x: x[1],words))
+    # for i in words:
+    #     print(i[1], 'in', index_tree[i[1]])
+    return list_of_words
 
 
 #%%
@@ -203,12 +284,19 @@ def cosine_similarity(k, tokens):
 
 start_time = time.time()
 query = input("Enter your Query")
-# corrected_query = spell_correct_context(query)
-# print(corrected_query)
-corrected_query = query
-tokens = preprocess(corrected_query)
-cosine_similarity(10,tokens)
+if '*' not in query:        
+    # corrected_query = spell_correct_context(query)
+    # print(corrected_query)
+    corrected_query = query
+    tokens = preprocess(corrected_query)
+    cosine_similarity(10,tokens)
+else:
+    res = query_func(permuterm_index, ori_inverted_index, query)
+    print(res)
+
 end_time = time.time()
 print('time:',end_time-start_time)
+
+
 
 # %%
