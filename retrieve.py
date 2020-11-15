@@ -12,6 +12,7 @@ from nltk.tokenize import word_tokenize
 from nltk.stem.porter import PorterStemmer
 from collections import Counter
 import time
+import requests
 #from spell_check import *
 # import nltk
 # nltk.download('stopwords')
@@ -47,9 +48,17 @@ for i,j,k in walk("./New_Processed_data/"):
 doc_file_mapping = {pos:val for pos,val in enumerate(files_list)}
 # use object-object BTree
 standard_inverted_index = OOBTree()
-# fill index
+# row and vector mappings
 row_vector_mapping = {}
 rev_row_vector_mapping = {}
+# URL doc_row mappings
+url_map = {}
+for doc in doc_file_mapping:
+    df = pd.read_csv("./Dataset/"+doc_file_mapping[doc])
+    for row,url in enumerate(df["URL"]):
+        docID = str(doc)+'_'+str(row)
+        url_map[docID] = url
+# fill index
 no_of_docs = 0
 for doc in doc_file_mapping:
     df = pd.read_csv("./New_Processed_data/"+doc_file_mapping[doc])
@@ -235,8 +244,11 @@ def gen_vec(query,each_doc):
     for i,j in enumerate(l_tokens):
         if j in query:
             tf = counter[j]
-            df = len(standard_inverted_index[j])
-            idf = math.log10(no_of_docs/df)
+            if standard_inverted_index.has_key(j):
+                df = len(standard_inverted_index[j])
+                idf = math.log10(no_of_docs/df)
+            else:
+                idf = 0
             query_vector[i] = tf * idf
         if j in keys:
             doc_vector[i] = docs[each_doc][j]
@@ -245,7 +257,93 @@ def gen_vec(query,each_doc):
 
 
 #%%
-def cosine_similarity(k, tokens):
+
+def get_elastic_search_results(orig_query):
+    url = "http://localhost:9200/_search?q="
+    mod_query = "+".join(orig_query.split())
+    url = url+mod_query
+    url1 = url+'&size=0&track_total_hits=true'
+    size = requests.get(url1).json()["hits"]["total"]["value"]
+    url = url+'&size='+str(size)
+    print("\nElastic Search request URL : ",url)
+    start = time.time()
+    response = requests.get(url).json()
+    end = time.time()
+    es_res = set()
+    f = open("es_res.txt",'w')
+    ctr = 0
+    for hit in response["hits"]["hits"]:
+        if ctr<100:
+            print("Filename : " ,hit["_index"].upper()+".csv",file=f)
+            print("Score : ",hit["_score"],file=f)
+            for i,j in hit["_source"].items():
+                print(i," : ",j,file=f)
+        es_res.add(hit["_source"]["URL"])
+        if ctr<100:
+            print("-----",file=f)
+            ctr+=1
+    f.close()
+    es_time = (end-start,response["took"])
+    return es_res,es_time
+
+#%%
+
+def display_metrics(out,scores,d_cosines,orig_query):
+    ir_res = set()
+    # print(out)
+    # display top 10 to std_out
+    print("\nTop 15 results : [Ranked on cosine similarity scores]")
+    for i,j in zip(out[:15],scores[:15]):
+        print("-----")
+        doc,row = map(int,rev_row_vector_mapping[i].split('_'))
+        print("Document Name : " , doc_file_mapping[doc],doc,"\nRow Number : ",row,"\nCosine Similarity Score : ",j)
+        df = pd.read_csv('./Dataset/'+doc_file_mapping[doc])
+        print(df.iloc[row]["Snippet"])
+        print("-----")
+    x = 0
+    while (scores[x]>0.001):
+        x+=1
+    out = out[:x]
+    scores = scores[:x]
+    # fill top 100 hits into ir_res.txt and populate ir_res set with URLs
+    f = open('ir_res.txt','w')
+    ctr = 0
+    for i,j in zip(out,scores):
+        doc,row = map(int,rev_row_vector_mapping[i].split('_'))
+        ir_res.add(url_map[str(doc)+'_'+str(row)])
+        if ctr<100:
+            print("Filename : " , doc_file_mapping[doc],doc,"\nrow_number : ",row,"\ncosine score : ",j,file=f)
+            df = pd.read_csv('./Dataset/'+doc_file_mapping[doc])
+            for i,j in df.iloc[row].items():
+                print(i,' : ',j,file=f)
+            print('--------',file=f)
+            ctr+=1
+    # call get_elastic_search_results to get urls of top 100 elastic search results
+    es_res,es_time = get_elastic_search_results(orig_query)
+    print("\n-----\nMetrics with comparison to elastic search : ")
+    # True Positive is all the files retrieved by both
+    TP = len(ir_res.intersection(es_res))
+    # False Positive are files retrieved by Our IR and those not retrieved by elastic search
+    FP = len(ir_res-es_res)
+    # False Negative are those retrieved by Elastic but missed by our algorithm
+    FN = len(es_res-ir_res)
+    # True negative are those that are not retrieved by elasticsearch or our algorithm
+    TN = len(d_cosines) - (TP+FP+FN)
+    accuracy = (TP+TN)/(TP+TN+FP+FN)
+    precision = (TP)/(TP+FP)
+    recall = (TP)/(TP+FN)
+    fscore = (2*precision*recall)/(precision+recall)
+    print("\nAccuracy : ",accuracy,"\n\nPrecision : ",precision,"\n\nRecall : ",recall,"\n\nF-Score : ",fscore)
+    print("\nConfusion Matrix :[[TP,FP][FN,TN]]")
+    print([[TP,FP],[FN,TN]])
+    print("\n-----\nTiming : \n")
+    print("Elastic Search Time : (timed api, value returned by api)",es_time)
+
+#%%
+def cosine_similarity(k, query):
+    start_time = time.time()
+    corrected_query = query
+    tokens = preprocess(corrected_query)
     print("Cosine Similarity")
     
     print("\nQuery:", corrected_query)
@@ -264,38 +362,40 @@ def cosine_similarity(k, tokens):
             doc_vec[ind] = docs[each_doc][term]
         d_cosines[each_doc] = cosine_sim(query_vector, doc_vec) """
     
-        
+
     for each_doc in docs:
         query_vector,doc_vec = gen_vec(tokens,each_doc)
         d_cosines[each_doc] = cosine_sim(query_vector, doc_vec)
    
-
-    out = np.array(d_cosines).argsort()[-k:][::-1]
-    scores = sorted(np.array(d_cosines))[-k:][::-1]
+    # out = np.array(d_cosines).argsort()[-k:][::-1]
+    # scores = sorted(np.array(d_cosines))[-k:][::-1]
+    out = np.array(d_cosines).argsort()[::-1]
+    scores = sorted(np.array(d_cosines))[::-1]
     print("")
-    
-    print(out)
-    for i,j in zip(out,scores):
-        # print("line : ", i)
-        doc,row = map(int,rev_row_vector_mapping[i].split('_'))
-        print("Filename : " , doc_file_mapping[doc],doc,row,j)
+    end_time = time.time()
+    print("Retrieval Time : ",end_time-start_time)
+    display_metrics(out,scores,d_cosines,query)
+    print("\nOur Retrieval Time : ",end_time-start_time)
 
 #%%
 
-start_time = time.time()
 query = input("Enter your Query")
 if '*' not in query:        
+    start_time = time.time()
     # corrected_query = spell_correct_context(query)
     # print(corrected_query)
-    corrected_query = query
-    tokens = preprocess(corrected_query)
-    cosine_similarity(10,tokens)
+    # corrected_query = query
+    # tokens = preprocess(corrected_query)
+    # cosine_similarity(100,tokens)
+    cosine_similarity(100,query)
+    end_time = time.time()
 else:
+    start_time = time.time()
     res = query_func(permuterm_index, ori_inverted_index, query)
     print(res)
+    end_time = time.time()
 
-end_time = time.time()
-print('time:',end_time-start_time)
+print('\nTotal time : [retrieval+metrics]',end_time-start_time)
 
 
 

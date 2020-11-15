@@ -1,0 +1,1000 @@
+Filename :  BBCNEWS.201906.csv
+Score :  8.194258
+URL  :  https://archive.org/details/BBCNEWS_20190625_200000_Outside_Source#start/2623/end/2658
+MatchDateTime  :  6/25/2019 20:43:58
+Station  :  BBCNEWS
+Show  :  Outside Source
+IAShowID  :  BBCNEWS_20190625_200000_Outside_Source
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190625_200000_Outside_Source/BBCNEWS_20190625_200000_Outside_Source.thumbs/BBCNEWS_20190625_200000_Outside_Source_002608.jpg
+Snippet  :  to say that while climate change is affecting people in developed countries through all of the fires and floods and heat waves that we
+-----
+Filename :  CNN.201704.csv
+Score :  8.152843
+URL  :  https://archive.org/details/CNNW_20170422_100000_New_Day_Saturday#start/1509/end/1544
+MatchDateTime  :  4/22/2017 10:25:24
+Station  :  CNN
+Show  :  New Day Saturday
+IAShowID  :  CNNW_20170422_100000_New_Day_Saturday
+IAPreviewThumb  :  https://archive.org/download/CNNW_20170422_100000_New_Day_Saturday/CNNW_20170422_100000_New_Day_Saturday.thumbs/CNNW_20170422_100000_New_Day_Saturday_001497.jpg
+Snippet  :  much more than climate change. also florida firefighters battling 91, 91 different fires. 25000 acres have already been burned. yesterday alone 22 new fires
+-----
+Filename :  CNN.200912.csv
+Score :  7.060657
+URL  :  https://archive.org/details/CNN_20091216_210000_The_Situation_Room_With_Wolf_Blitzer#start/51/end/86
+MatchDateTime  :  12/16/2009 21:01:06
+Station  :  CNN
+Show  :  The Situation Room With Wolf Blitzer
+IAShowID  :  CNN_20091216_210000_The_Situation_Room_With_Wolf_Blitzer
+IAPreviewThumb  :  https://archive.org/download/CNN_20091216_210000_The_Situation_Room_With_Wolf_Blitzer/CNN_20091216_210000_The_Situation_Room_With_Wolf_Blitzer.thumbs/CNN_20091216_210000_The_Situation_Room_With_Wolf_Blitzer_000053.jpg
+Snippet  :  standoff. and the terminator versus the ex-governor. in the climate change fight between arnold schwarzenegger and sarah palin, he fired first, now palin fires right back. i'm wolf blitzer at cnn's
+-----
+Filename :  CNN.201907.csv
+Score :  6.8559275
+URL  :  https://archive.org/details/CNNW_20190727_070000_CNN_Newsroom_Live#start/3183/end/3218
+MatchDateTime  :  7/27/2019 7:53:18
+Station  :  CNN
+Show  :  CNN Newsroom Live
+IAShowID  :  CNNW_20190727_070000_CNN_Newsroom_Live
+IAPreviewThumb  :  https://archive.org/download/CNNW_20190727_070000_CNN_Newsroom_Live/CNNW_20190727_070000_CNN_Newsroom_Live.thumbs/CNNW_20190727_070000_CNN_Newsroom_Live_003178.jpg
+Snippet  :  on climate change, the fact that they're emitting so much carbon dioxide. reporter: while the data from july is not yet in, the amount of carbon dioxide from fires last month is startling. in june alone these fires
+-----
+Filename :  CNN.200912.csv
+Score :  6.766116
+URL  :  https://archive.org/details/CNN_20091209_160000_CNN_Newsroom#start/1890/end/1925
+MatchDateTime  :  12/9/2009 16:31:45
+Station  :  CNN
+Show  :  CNN Newsroom
+IAShowID  :  CNN_20091209_160000_CNN_Newsroom
+IAPreviewThumb  :  https://archive.org/download/CNN_20091209_160000_CNN_Newsroom/CNN_20091209_160000_CNN_Newsroom.thumbs/CNN_20091209_160000_CNN_Newsroom_001885.jpg
+Snippet  :  these gases far beyond the natural levels from sources such as fires and volcanic activity and even humans and animals breathing. most scientists believe the so-called greenhouse gases now trap too much of the sun's
+-----
+Filename :  BBCNEWS.201909.csv
+Score :  6.554475
+URL  :  https://archive.org/details/BBCNEWS_20190920_000000_Newsday#start/722/end/757
+MatchDateTime  :  9/20/2019 0:12:17
+Station  :  BBCNEWS
+Show  :  Newsday
+IAShowID  :  BBCNEWS_20190920_000000_Newsday
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190920_000000_Newsday/BBCNEWS_20190920_000000_Newsday.thumbs/BBCNEWS_20190920_000000_Newsday_000719.jpg
+Snippet  :  these fires release enormous carbon dioxide into the atmosphere. at the peak of the 2015 fires, the worst fires in two decades, the blaze are estimated to have emanated more greenhouse gases
+-----
+Filename :  BBCNEWS.201910.csv
+Score :  6.4482446
+URL  :  https://archive.org/details/BBCNEWS_20191009_090000_Victoria_Derbyshire#start/766/end/801
+MatchDateTime  :  10/9/2019 9:13:01
+Station  :  BBCNEWS
+Show  :  Victoria Derbyshire
+IAShowID  :  BBCNEWS_20191009_090000_Victoria_Derbyshire
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20191009_090000_Victoria_Derbyshire/BBCNEWS_20191009_090000_Victoria_Derbyshire.thumbs/BBCNEWS_20191009_090000_Victoria_Derbyshire_000748.jpg
+Snippet  :  the other target for campaigners is political. critics say it's the brazilian government's policies that have fuelled the rise in fires this year. far-right president jair bolsonaro, a climate-change sceptic, has cut funding for environmental
+-----
+Filename :  FOXNEWS.201301.csv
+Score :  6.369758
+URL  :  https://archive.org/details/FOXNEWSW_20130121_220000_The_Five#start/1433/end/1468
+MatchDateTime  :  1/21/2013 22:24:08
+Station  :  FOXNEWS
+Show  :  The Five
+IAShowID  :  FOXNEWSW_20130121_220000_The_Five
+IAPreviewThumb  :  https://archive.org/download/FOXNEWSW_20130121_220000_The_Five/FOXNEWSW_20130121_220000_The_Five.thumbs/FOXNEWSW_20130121_220000_The_Five_001425.jpg
+Snippet  :  raging fires and crippling droughts, and more powerful storms. greg: it doesn't link weather changes and storms to global warming. he said the path toward
+-----
+Filename :  FOXNEWS.201502.csv
+Score :  6.3454733
+URL  :  https://archive.org/details/FOXNEWSW_20150210_140000_Americas_Newsroom#start/54/end/89
+MatchDateTime  :  2/10/2015 14:01:09
+Station  :  FOXNEWS
+Show  :  Americas Newsroom
+IAShowID  :  FOXNEWSW_20150210_140000_Americas_Newsroom
+IAPreviewThumb  :  https://archive.org/download/FOXNEWSW_20150210_140000_Americas_Newsroom/FOXNEWSW_20150210_140000_Americas_Newsroom.thumbs/FOXNEWSW_20150210_140000_Americas_Newsroom_000045.jpg
+Snippet  :  covering stories like climate change because terror stories sells. if it bleeds it leads. you show crime stories and fires. that's what folks watch.
+-----
+Filename :  BBCNEWS.201902.csv
+Score :  6.200784
+URL  :  https://archive.org/details/BBCNEWS_20190201_010000_Newsday#start/790/end/825
+MatchDateTime  :  2/1/2019 1:13:25
+Station  :  BBCNEWS
+Show  :  Newsday
+IAShowID  :  BBCNEWS_20190201_010000_Newsday
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190201_010000_Newsday/BBCNEWS_20190201_010000_Newsday.thumbs/BBCNEWS_20190201_010000_Newsday_000778.jpg
+Snippet  :  are suffering the opposite. drought, heatwaves and bush fires. is the world's weather getting more extreme and is climate change to blame? also on the programme: the abuse allegations which have rocked
+-----
+Filename :  MSNBC.201004.csv
+Score :  6.1924214
+URL  :  https://archive.org/details/MSNBC_20100423_050000_Countdown_With_Keith_Olbermann#start/2862/end/2897
+MatchDateTime  :  4/23/2010 5:47:57
+Station  :  MSNBC
+Show  :  Countdown With Keith Olbermann
+IAShowID  :  MSNBC_20100423_050000_Countdown_With_Keith_Olbermann
+IAPreviewThumb  :  https://archive.org/download/MSNBC_20100423_050000_Countdown_With_Keith_Olbermann/MSNBC_20100423_050000_Countdown_With_Keith_Olbermann.thumbs/MSNBC_20100423_050000_Countdown_With_Keith_Olbermann_002847.jpg
+Snippet  :  decade alone. but it faces new challenges, extreme weather and fires already cause 40% of all major outages. climate change will bring more intense hurricanes, more floods,
+-----
+Filename :  MSNBC.201405.csv
+Score :  6.078946
+URL  :  https://archive.org/details/MSNBCW_20140525_160000_Weekends_With_Alex_Witt#start/1272/end/1307
+MatchDateTime  :  5/25/2014 16:21:27
+Station  :  MSNBC
+Show  :  Weekends With Alex Witt
+IAShowID  :  MSNBCW_20140525_160000_Weekends_With_Alex_Witt
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20140525_160000_Weekends_With_Alex_Witt/MSNBCW_20140525_160000_Weekends_With_Alex_Witt.thumbs/MSNBCW_20140525_160000_Weekends_With_Alex_Witt_001245.jpg
+Snippet  :  california governor jerry brown. he made them on monday about the shifting climate. he said california is right at the epicenter of climate change. the average temperature is changing. it's easy for forest fires to
+-----
+Filename :  FOXNEWS.201306.csv
+Score :  6.033777
+URL  :  https://archive.org/details/FOXNEWSW_20130625_170000_America_Live#start/2934/end/2969
+MatchDateTime  :  6/25/2013 17:49:09
+Station  :  FOXNEWS
+Show  :  America Live
+IAShowID  :  FOXNEWSW_20130625_170000_America_Live
+IAPreviewThumb  :  https://archive.org/download/FOXNEWSW_20130625_170000_America_Live/FOXNEWSW_20130625_170000_America_Live.thumbs/FOXNEWSW_20130625_170000_America_Live_002925.jpg
+Snippet  :  we know that no single weather event is caused solely by climate change, droughts and fires and floods, they go back to a ncient times.
+-----
+Filename :  FOXNEWS.201401.csv
+Score :  5.9975176
+URL  :  https://archive.org/details/FOXNEWSW_20140128_110000_FOX_and_Friends#start/3654/end/3689
+MatchDateTime  :  1/28/2014 12:01:09
+Station  :  FOXNEWS
+Show  :  FOX and Friends
+IAShowID  :  FOXNEWSW_20140128_110000_FOX_and_Friends
+IAPreviewThumb  :  https://archive.org/download/FOXNEWSW_20140128_110000_FOX_and_Friends/FOXNEWSW_20140128_110000_FOX_and_Friends.thumbs/FOXNEWSW_20140128_110000_FOX_and_Friends_003645.jpg
+Snippet  :  prove he needs a wheelchair. do you believe this? abbott fires back next. then the man who says he created the internet now has a way to fight global warming. al gore calling for fertility
+-----
+Filename :  BBCNEWS.201811.csv
+Score :  5.938568
+URL  :  https://archive.org/details/BBCNEWS_20181112_140000_Afternoon_Live#start/8367/end/8402
+MatchDateTime  :  11/12/2018 16:19:42
+Station  :  BBCNEWS
+Show  :  Afternoon Live
+IAShowID  :  BBCNEWS_20181112_140000_Afternoon_Live
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20181112_140000_Afternoon_Live/BBCNEWS_20181112_140000_Afternoon_Live.thumbs/BBCNEWS_20181112_140000_Afternoon_Live_008367.jpg
+Snippet  :  yes and no. climate change will increase the risk of wildfire occurring, without doubt. california has already demonstrated that the wildfire season is increasing. it is very clear that fires will be increasing in the area but fires are normal in this ecosystem. you will
+-----
+Filename :  MSNBC.201106.csv
+Score :  5.9328227
+URL  :  https://archive.org/details/MSNBC_20110621_093000_Way_Too_Early_With_Willie_Geist#start/596/end/631
+MatchDateTime  :  6/21/2011 9:40:11
+Station  :  MSNBC
+Show  :  Way Too Early With Willie Geist
+IAShowID  :  MSNBC_20110621_093000_Way_Too_Early_With_Willie_Geist
+IAPreviewThumb  :  https://archive.org/download/MSNBC_20110621_093000_Way_Too_Early_With_Willie_Geist/MSNBC_20110621_093000_Way_Too_Early_With_Willie_Geist.thumbs/MSNBC_20110621_093000_Way_Too_Early_With_Willie_Geist_000570.jpg
+Snippet  :  fanned by strong winds. on capitol hill, the chief of the u.s. forest service blames climate change for this year's historic fires. we're going to continue to have large fires. change in climate is one of the factors that will contribute to
+-----
+Filename :  FOXNEWS.201901.csv
+Score :  5.9247894
+URL  :  https://archive.org/details/FOXNEWSW_20190127_220000_The_Greg_Gutfeld_Show#start/62/end/97
+MatchDateTime  :  1/27/2019 22:01:17
+Station  :  FOXNEWS
+Show  :  The Greg Gutfeld Show
+IAShowID  :  FOXNEWSW_20190127_220000_The_Greg_Gutfeld_Show
+IAPreviewThumb  :  https://archive.org/download/FOXNEWSW_20190127_220000_The_Greg_Gutfeld_Show/FOXNEWSW_20190127_220000_The_Greg_Gutfeld_Show.thumbs/FOXNEWSW_20190127_220000_The_Greg_Gutfeld_Show_000058.jpg
+Snippet  :  let's speak truth. climate change is real and it is happening now. [cheers and applause] everybody here knows from wild fires in the west to
+-----
+Filename :  BBCNEWS.201911.csv
+Score :  5.8757715
+URL  :  https://archive.org/details/BBCNEWS_20191112_224500_The_Papers#start/426/end/461
+MatchDateTime  :  11/12/2019 22:52:21
+Station  :  BBCNEWS
+Show  :  The Papers
+IAShowID  :  BBCNEWS_20191112_224500_The_Papers
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20191112_224500_The_Papers/BBCNEWS_20191112_224500_The_Papers.thumbs/BBCNEWS_20191112_224500_The_Papers_000419.jpg
+Snippet  :  said that the key to fighting climate change, the fires in australia are cyclical, the problem is that they have lost them for so long, the intensity and their fires taking place in california, across
+-----
+Filename :  FOXNEWS.201612.csv
+Score :  5.870778
+URL  :  https://archive.org/details/FOXNEWSW_20161208_110000_FOX__Friends#start/7450/end/7485
+MatchDateTime  :  12/8/2016 13:04:25
+Station  :  FOXNEWS
+Show  :  FOX  Friends
+IAShowID  :  FOXNEWSW_20161208_110000_FOX__Friends
+IAPreviewThumb  :  https://archive.org/download/FOXNEWSW_20161208_110000_FOX__Friends/FOXNEWSW_20161208_110000_FOX__Friends.thumbs/FOXNEWSW_20161208_110000_FOX__Friends_007437.jpg
+Snippet  :  the sierra club says it's like putting an arsonist in part of fires. he said that climate change is far from settled science and obviously those on the left just
+-----
+Filename :  FOXNEWS.201909.csv
+Score :  5.7249985
+URL  :  https://archive.org/details/FOXNEWSW_20190906_040000_Tucker_Carlson_Tonight#start/729/end/764
+MatchDateTime  :  9/6/2019 4:12:24
+Station  :  FOXNEWS
+Show  :  Tucker Carlson Tonight
+IAShowID  :  FOXNEWSW_20190906_040000_Tucker_Carlson_Tonight
+IAPreviewThumb  :  https://archive.org/download/FOXNEWSW_20190906_040000_Tucker_Carlson_Tonight/FOXNEWSW_20190906_040000_Tucker_Carlson_Tonight.thumbs/FOXNEWSW_20190906_040000_Tucker_Carlson_Tonight_000719.jpg
+Snippet  :  bigger fires in the west, supercharged storms like the one we see now, hurricane dorian. we are seeing firsthand the effects of climate change as a powerful atlantic hurricane is sitting right now off the coast of florida. tucker: chris plante hosts
+-----
+Filename :  BBCNEWS.201911.csv
+Score :  5.716637
+URL  :  https://archive.org/details/BBCNEWS_20191110_030000_BBC_News#start/1120/end/1155
+MatchDateTime  :  11/10/2019 3:18:55
+Station  :  BBCNEWS
+Show  :  BBC News
+IAShowID  :  BBCNEWS_20191110_030000_BBC_News
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20191110_030000_BBC_News/BBCNEWS_20191110_030000_BBC_News.thumbs/BBCNEWS_20191110_030000_BBC_News_001107.jpg
+Snippet  :  climate change and generating one degree above long-term average temperatures. and temperature is an important factor in fire behaviour and the ability to sustain fires, and particularly for fires to get going and to start. richard, i want
+-----
+Filename :  BBCNEWS.201911.csv
+Score :  5.6781917
+URL  :  https://archive.org/details/BBCNEWS_20191112_200000_BBC_News#start/769/end/804
+MatchDateTime  :  11/12/2019 20:13:04
+Station  :  BBCNEWS
+Show  :  BBC News
+IAShowID  :  BBCNEWS_20191112_200000_BBC_News
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20191112_200000_BBC_News/BBCNEWS_20191112_200000_BBC_News.thumbs/BBCNEWS_20191112_200000_BBC_News_000748.jpg
+Snippet  :  organisation, friends fo the earth. so really first off, of all the disasters we have seen, the flooding in fires infires and in fires and various others around the globe, are they really a symptom of the climate crisis? yes,
+-----
+Filename :  BBCNEWS.201909.csv
+Score :  5.676493
+URL  :  https://archive.org/details/BBCNEWS_20190920_130000_Afternoon_Live#start/6548/end/6583
+MatchDateTime  :  9/20/2019 14:49:23
+Station  :  BBCNEWS
+Show  :  Afternoon Live
+IAShowID  :  BBCNEWS_20190920_130000_Afternoon_Live
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190920_130000_Afternoon_Live/BBCNEWS_20190920_130000_Afternoon_Live.thumbs/BBCNEWS_20190920_130000_Afternoon_Live_006538.jpg
+Snippet  :  dioxide into the atmosphere. at the peak of the 2015 fires, the worst fires in two decades, the blaze are estimated to have emanated more greenhouse gases than the entire us economy in the same period.
+-----
+Filename :  MSNBC.201405.csv
+Score :  5.65909
+URL  :  https://archive.org/details/MSNBCW_20140505_200000_NOW_With_Alex_Wagner#start/2842/end/2877
+MatchDateTime  :  5/5/2014 20:47:37
+Station  :  MSNBC
+Show  :  NOW With Alex Wagner
+IAShowID  :  MSNBCW_20140505_200000_NOW_With_Alex_Wagner
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20140505_200000_NOW_With_Alex_Wagner/MSNBCW_20140505_200000_NOW_With_Alex_Wagner.thumbs/MSNBCW_20140505_200000_NOW_With_Alex_Wagner_002835.jpg
+Snippet  :  fires, crippling doubt, and storms. that was president obama in his second inauguration vowing to take on climate change as one of his top priorities of his final term. now years after putting other policy fights first, his environmental agenda is ramping
+-----
+Filename :  FOXNEWS.201412.csv
+Score :  5.61306
+URL  :  https://archive.org/details/FOXNEWSW_20141215_060000_Stossel#start/2228/end/2263
+MatchDateTime  :  12/15/2014 6:37:23
+Station  :  FOXNEWS
+Show  :  Stossel
+IAShowID  :  FOXNEWSW_20141215_060000_Stossel
+IAPreviewThumb  :  https://archive.org/download/FOXNEWSW_20141215_060000_Stossel/FOXNEWSW_20141215_060000_Stossel.thumbs/FOXNEWSW_20141215_060000_Stossel_002205.jpg
+Snippet  :  is global warming a big problem? yes, it is. i think it's a huge issue and we're all killing ourselves. it scares me. it should scare everybody. look how bad the storms have gotten, look how bad the fires have gotten. look how bad the fires get.
+-----
+Filename :  BBCNEWS.201811.csv
+Score :  5.5613604
+URL  :  https://archive.org/details/BBCNEWS_20181118_070000_Breakfast#start/1689/end/1724
+MatchDateTime  :  11/18/2018 7:28:24
+Station  :  BBCNEWS
+Show  :  Breakfast
+IAShowID  :  BBCNEWS_20181118_070000_Breakfast
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20181118_070000_Breakfast/BBCNEWS_20181118_070000_Breakfast.thumbs/BBCNEWS_20181118_070000_Breakfast_001677.jpg
+Snippet  :  bringing the total number of deaths to 76. mr trump said the fires had not changed his views about climate
+-----
+Filename :  BBCNEWS.201707.csv
+Score :  5.559857
+URL  :  https://archive.org/details/BBCNEWS_20170707_030000_BBC_News#start/1683/end/1718
+MatchDateTime  :  7/7/2017 3:28:18
+Station  :  BBCNEWS
+Show  :  BBC News
+IAShowID  :  BBCNEWS_20170707_030000_BBC_News
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20170707_030000_BBC_News/BBCNEWS_20170707_030000_BBC_News.thumbs/BBCNEWS_20170707_030000_BBC_News_001678.jpg
+Snippet  :  and started several fires. at least 70 officers were injured. it's not clear how many protesters. in a speech on his arrival in europe, the us president donald trump called on western civilisation to stand united against what he called the 'menace' of radical islamist extremism. trade, climate change, and north korea are also expected
+-----
+Filename :  BBCNEWS.201909.csv
+Score :  5.5239096
+URL  :  https://archive.org/details/BBCNEWS_20190920_160000_BBC_News_at_Five#start/2602/end/2637
+MatchDateTime  :  9/20/2019 16:43:37
+Station  :  BBCNEWS
+Show  :  BBC News at Five
+IAShowID  :  BBCNEWS_20190920_160000_BBC_News_at_Five
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190920_160000_BBC_News_at_Five/BBCNEWS_20190920_160000_BBC_News_at_Five.thumbs/BBCNEWS_20190920_160000_BBC_News_at_Five_002579.jpg
+Snippet  :  at the peak of the 2015 fires, the worst in two decades, the blazes are estimated to have emitted more greenhouse gases than the entire us economy in the same period. after those devastating fires, indonesia vowed to prevent it
+-----
+Filename :  CNN.201905.csv
+Score :  5.4626117
+URL  :  https://archive.org/details/CNNW_20190514_170000_CNN_Right_Now_With_Brianna_Keilar#start/1257/end/1292
+MatchDateTime  :  5/14/2019 17:21:12
+Station  :  CNN
+Show  :  CNN Right Now With Brianna Keilar
+IAShowID  :  CNNW_20190514_170000_CNN_Right_Now_With_Brianna_Keilar
+IAPreviewThumb  :  https://archive.org/download/CNNW_20190514_170000_CNN_Right_Now_With_Brianna_Keilar/CNNW_20190514_170000_CNN_Right_Now_With_Brianna_Keilar.thumbs/CNNW_20190514_170000_CNN_Right_Now_With_Brianna_Keilar_001229.jpg
+Snippet  :  shot at joe biden questioning his commitment to climate change, and the front-runner fires back. s. s.u. suv these letters used to mean something. letters earned in backwoods, high hills, and steep dunes. but somewhere along the way,
+-----
+Filename :  BBCNEWS.201907.csv
+Score :  5.4344115
+URL  :  https://archive.org/details/BBCNEWS_20190727_010000_BBC_News#start/827/end/862
+MatchDateTime  :  7/27/2019 1:14:02
+Station  :  BBCNEWS
+Show  :  BBC News
+IAShowID  :  BBCNEWS_20190727_010000_BBC_News
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190727_010000_BBC_News/BBCNEWS_20190727_010000_BBC_News.thumbs/BBCNEWS_20190727_010000_BBC_News_000808.jpg
+Snippet  :  much drier, much warmer, so when there is an ignition, then the fires have been able to persist and spread quite quickly, and endure. arctic fires are common between may and october, but higher temperatures, blamed on climate change, have meant the fires this year have been more intense.
+-----
+Filename :  BBCNEWS.201907.csv
+Score :  5.4344115
+URL  :  https://archive.org/details/BBCNEWS_20190727_060000_Breakfast#start/646/end/681
+MatchDateTime  :  7/27/2019 6:11:01
+Station  :  BBCNEWS
+Show  :  Breakfast
+IAShowID  :  BBCNEWS_20190727_060000_Breakfast
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190727_060000_Breakfast/BBCNEWS_20190727_060000_Breakfast.thumbs/BBCNEWS_20190727_060000_Breakfast_000629.jpg
+Snippet  :  much drier, much warmer, so when there is an ignition, then the fires have been able to persist and spread quite quickly, and endure. arctic fires are common between may and october but higher temperatures, blamed on climate change, have meant the fires this year have been more intense.
+-----
+Filename :  CNN.201509.csv
+Score :  5.423174
+URL  :  https://archive.org/details/CNNW_20150914_210000_Situation_Room_With_Wolf_Blitzer#start/2341/end/2376
+MatchDateTime  :  9/14/2015 21:39:16
+Station  :  CNN
+Show  :  Situation Room With Wolf Blitzer
+IAShowID  :  CNNW_20150914_210000_Situation_Room_With_Wolf_Blitzer
+IAPreviewThumb  :  https://archive.org/download/CNNW_20150914_210000_Situation_Room_With_Wolf_Blitzer/CNNW_20150914_210000_Situation_Room_With_Wolf_Blitzer.thumbs/CNNW_20150914_210000_Situation_Room_With_Wolf_Blitzer_001845.jpg
+Snippet  :  decade. the time has come for those of us in congress to realize if we don't maintain the forest health, if we don't provide the thinning, the forest management, these fires will rage out of control. and, yes, it is climate change, it is drought, but it also is
+-----
+Filename :  MSNBC.200912.csv
+Score :  5.4224305
+URL  :  https://archive.org/details/MSNBC_20091210_010000_Countdown_With_Keith_Olbermann#start/3249/end/3284
+MatchDateTime  :  12/10/2009 1:54:24
+Station  :  MSNBC
+Show  :  Countdown With Keith Olbermann
+IAShowID  :  MSNBC_20091210_010000_Countdown_With_Keith_Olbermann
+IAPreviewThumb  :  https://archive.org/download/MSNBC_20091210_010000_Countdown_With_Keith_Olbermann/MSNBC_20091210_010000_Countdown_With_Keith_Olbermann.thumbs/MSNBC_20091210_010000_Countdown_With_Keith_Olbermann_003236.jpg
+Snippet  :  is disappearing before our eyes. what do they think is causing this? mr. gore also cited the long list of other recent tangible effects of climate change, like record storms, droughts, fires. and when asked about palin's claim on her facebook page that these are, quote, doomsday scare
+-----
+Filename :  BBCNEWS.201904.csv
+Score :  5.415813
+URL  :  https://archive.org/details/BBCNEWS_20190421_210000_BBC_News#start/871/end/906
+MatchDateTime  :  4/21/2019 21:14:46
+Station  :  BBCNEWS
+Show  :  BBC News
+IAShowID  :  BBCNEWS_20190421_210000_BBC_News
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190421_210000_BBC_News/BBCNEWS_20190421_210000_BBC_News.thumbs/BBCNEWS_20190421_210000_BBC_News_000867.jpg
+Snippet  :  with fires burning on ilkley moor. more than 70 firefighters and a helicopter have been battling a large fire, covering around 25000 square metres. the swedish teenage activist greta thunberg has addressed climate change protestors in london tonight.
+-----
+Filename :  BBCNEWS.201702.csv
+Score :  5.405755
+URL  :  https://archive.org/details/BBCNEWS_20170213_000000_Newsday#start/531/end/566
+MatchDateTime  :  2/13/2017 0:09:06
+Station  :  BBCNEWS
+Show  :  Newsday
+IAShowID  :  BBCNEWS_20170213_000000_Newsday
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20170213_000000_Newsday/BBCNEWS_20170213_000000_Newsday.thumbs/BBCNEWS_20170213_000000_Newsday_000508.jpg
+Snippet  :  winds, low humidity. we have been monitoring that for half a century and we see a significant increase in this type of weather over the last 50 yea rs. 50 years. that has been pushed up why climate change, by the commission of fossil fuels. we are seeing very hot fires, fires that
+-----
+Filename :  CNN.201909.csv
+Score :  5.384889
+URL  :  https://archive.org/details/CNNW_20190905_020000_Pete_Buttigieg_Climate_Town_Hall#start/176/end/211
+MatchDateTime  :  9/5/2019 2:03:11
+Station  :  CNN
+Show  :  Pete Buttigieg Climate Town Hall
+IAShowID  :  CNNW_20190905_020000_Pete_Buttigieg_Climate_Town_Hall
+IAPreviewThumb  :  https://archive.org/download/CNNW_20190905_020000_Pete_Buttigieg_Climate_Town_Hall/CNNW_20190905_020000_Pete_Buttigieg_Climate_Town_Hall.thumbs/CNNW_20190905_020000_Pete_Buttigieg_Climate_Town_Hall_000149.jpg
+Snippet  :  from oakland, california. director of the center or climate change and health. her family home was destroyed in wild fires. we were showing one burning now. outside l.a. so, doctor, sorry for your loss.
+-----
+Filename :  BBCNEWS.201907.csv
+Score :  5.3817635
+URL  :  https://archive.org/details/BBCNEWS_20190727_133000_Hard_Drive#start/16/end/51
+MatchDateTime  :  7/27/2019 13:30:31
+Station  :  BBCNEWS
+Show  :  Hard Drive
+IAShowID  :  BBCNEWS_20190727_133000_Hard_Drive
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190727_133000_Hard_Drive/BBCNEWS_20190727_133000_Hard_Drive.thumbs/BBCNEWS_20190727_133000_Hard_Drive_000029.jpg
+Snippet  :  what this means is it's much drier, much warmer, so when there is an ignition, then the fires have been able to persist and spread quite quickly, and endure. arctic fires are common between may and october but higher temperatures, blamed on climate change, have meant the fires this year have
+-----
+Filename :  MSNBC.201411.csv
+Score :  5.330706
+URL  :  https://archive.org/details/MSNBCW_20141110_220000_The_Ed_Show#start/866/end/901
+MatchDateTime  :  11/10/2014 22:14:41
+Station  :  MSNBC
+Show  :  The Ed Show
+IAShowID  :  MSNBCW_20141110_220000_The_Ed_Show
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20141110_220000_The_Ed_Show/MSNBCW_20141110_220000_The_Ed_Show.thumbs/MSNBCW_20141110_220000_The_Ed_Show_000855.jpg
+Snippet  :  this gentleman. that's right he infamously said climate change is the greatest hoax perpetrated on the american people. that he could have the nerve to say that after the summer of extreme forest fires, more
+-----
+Filename :  FOXNEWS.201801.csv
+Score :  5.328368
+URL  :  https://archive.org/details/FOXNEWSW_20180125_050000_Tucker_Carlson_Tonight#start/2577/end/2612
+MatchDateTime  :  1/25/2018 5:43:12
+Station  :  FOXNEWS
+Show  :  Tucker Carlson Tonight
+IAShowID  :  FOXNEWSW_20180125_050000_Tucker_Carlson_Tonight
+IAPreviewThumb  :  https://archive.org/download/FOXNEWSW_20180125_050000_Tucker_Carlson_Tonight/FOXNEWSW_20180125_050000_Tucker_Carlson_Tonight.thumbs/FOXNEWSW_20180125_050000_Tucker_Carlson_Tonight_002577.jpg
+Snippet  :  tucker: that is not true, having traveled around the world and seen countless tire fires in progress in downtowns around the world, you can talk -- and this is my point. you can talk all you want about global warming as a threat, but if you're letting tire fires go
+-----
+Filename :  FOXNEWS.201909.csv
+Score :  5.3056836
+URL  :  https://archive.org/details/FOXNEWSW_20190905_040000_Tucker_Carlson_Tonight#start/2402/end/2437
+MatchDateTime  :  9/5/2019 4:40:17
+Station  :  FOXNEWS
+Show  :  Tucker Carlson Tonight
+IAShowID  :  FOXNEWSW_20190905_040000_Tucker_Carlson_Tonight
+IAPreviewThumb  :  https://archive.org/download/FOXNEWSW_20190905_040000_Tucker_Carlson_Tonight/FOXNEWSW_20190905_040000_Tucker_Carlson_Tonight.thumbs/FOXNEWSW_20190905_040000_Tucker_Carlson_Tonight_002400.jpg
+Snippet  :  more of amazon rainforest, why? wealth. poor people don't have to burn down land. they have machinery or they don't have to be subsistence farmers. if that is what's driving a lot of these fires. they are man-made what they are not climate change-made regardless of what people like
+-----
+Filename :  MSNBC.201909.csv
+Score :  5.284461
+URL  :  https://archive.org/details/MSNBCW_20190922_000000_All_In_With_Chris_Hayes#start/2205/end/2240
+MatchDateTime  :  9/22/2019 0:37:00
+Station  :  MSNBC
+Show  :  All In With Chris Hayes
+IAShowID  :  MSNBCW_20190922_000000_All_In_With_Chris_Hayes
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20190922_000000_All_In_With_Chris_Hayes/MSNBCW_20190922_000000_All_In_With_Chris_Hayes.thumbs/MSNBCW_20190922_000000_All_In_With_Chris_Hayes_002189.jpg
+Snippet  :  move because of climate change, chris. cal, the scientists you spoke to talked about the fires there. what are the warmth and heat done to the fire season out there? reporter: so compared to the
+-----
+Filename :  CNN.201909.csv
+Score :  5.2702193
+URL  :  https://archive.org/details/CNNW_20190904_040000_Anderson_Cooper_360#start/2516/end/2551
+MatchDateTime  :  9/4/2019 4:42:11
+Station  :  CNN
+Show  :  Anderson Cooper 360
+IAShowID  :  CNNW_20190904_040000_Anderson_Cooper_360
+IAPreviewThumb  :  https://archive.org/download/CNNW_20190904_040000_Anderson_Cooper_360/CNNW_20190904_040000_Anderson_Cooper_360.thumbs/CNNW_20190904_040000_Anderson_Cooper_360_002519.jpg
+Snippet  :  measured by the hurricanes in the east and wild fires in the west and drought. and heat waves. are really becoming more unavoidable for more americans. two-thirds of americans saying they believe climate change is
+-----
+Filename :  BBCNEWS.201911.csv
+Score :  5.2541656
+URL  :  https://archive.org/details/BBCNEWS_20191113_060000_Breakfast#start/443/end/478
+MatchDateTime  :  11/13/2019 6:07:38
+Station  :  BBCNEWS
+Show  :  Breakfast
+IAShowID  :  BBCNEWS_20191113_060000_Breakfast
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20191113_060000_Breakfast/BBCNEWS_20191113_060000_Breakfast.thumbs/BBCNEWS_20191113_060000_Breakfast_000418.jpg
+Snippet  :  of new south wales are expected to ease the immediate danger of wildfires - but increasingly windy conditions in queensland are increasing the risk there. around 130 fires are still burning across the two states and the world meteorological organisation says the fires are the result of climate change. our reporter phil mercer
+-----
+Filename :  MSNBC.200912.csv
+Score :  5.229352
+URL  :  https://archive.org/details/MSNBC_20091210_060000_Countdown_With_Keith_Olbermann#start/3249/end/3284
+MatchDateTime  :  12/10/2009 6:54:24
+Station  :  MSNBC
+Show  :  Countdown With Keith Olbermann
+IAShowID  :  MSNBC_20091210_060000_Countdown_With_Keith_Olbermann
+IAPreviewThumb  :  https://archive.org/download/MSNBC_20091210_060000_Countdown_With_Keith_Olbermann/MSNBC_20091210_060000_Countdown_With_Keith_Olbermann.thumbs/MSNBC_20091210_060000_Countdown_With_Keith_Olbermann_003235.jpg
+Snippet  :  'll after all, the entire north polar ice cap which has been there for most of the last 3 million years, is disappearing before our eyes. what do they think is causing this? mr. gore also cited the long list of other recent tangible effects of climate change like record storms, droughts, fires.
+-----
+Filename :  CNN.201402.csv
+Score :  5.217923
+URL  :  https://archive.org/details/CNNW_20140219_232800_Crossfire#start/50/end/85
+MatchDateTime  :  2/19/2014 23:29:05
+Station  :  CNN
+Show  :  Crossfire
+IAShowID  :  CNNW_20140219_232800_Crossfire
+IAPreviewThumb  :  https://archive.org/download/CNNW_20140219_232800_Crossfire/CNNW_20140219_232800_Crossfire.thumbs/CNNW_20140219_232800_Crossfire_000046.jpg
+Snippet  :  tonight on 'crossfire' -- fires in kiev. chaos in the middle east. challenges at home and abroad. but is the biggest threat to our national security something else? in a sense, climate change
+-----
+Filename :  BBCNEWS.201907.csv
+Score :  5.2147675
+URL  :  https://archive.org/details/BBCNEWS_20190727_020000_BBC_News#start/1013/end/1048
+MatchDateTime  :  7/27/2019 2:17:08
+Station  :  BBCNEWS
+Show  :  BBC News
+IAShowID  :  BBCNEWS_20190727_020000_BBC_News
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190727_020000_BBC_News/BBCNEWS_20190727_020000_BBC_News.thumbs/BBCNEWS_20190727_020000_BBC_News_000988.jpg
+Snippet  :  to persist and spread quite quickly, and endure. arctic fires are common between may and october but higher temperatures, blamed on climate change, have meant the fires this year have been more intense.
+-----
+Filename :  BBCNEWS.201907.csv
+Score :  5.2147675
+URL  :  https://archive.org/details/BBCNEWS_20190727_210000_BBC_News#start/1544/end/1579
+MatchDateTime  :  7/27/2019 21:25:59
+Station  :  BBCNEWS
+Show  :  BBC News
+IAShowID  :  BBCNEWS_20190727_210000_BBC_News
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190727_210000_BBC_News/BBCNEWS_20190727_210000_BBC_News.thumbs/BBCNEWS_20190727_210000_BBC_News_001529.jpg
+Snippet  :  to persist and spread quite quickly, and endure. arctic fires are common between may and october but higher temperatures, blamed on climate change, have meant the fires this year have been more intense.
+-----
+Filename :  BBCNEWS.201907.csv
+Score :  5.2147675
+URL  :  https://archive.org/details/BBCNEWS_20190727_123000_Talking_Movies#start/31/end/66
+MatchDateTime  :  7/27/2019 12:30:46
+Station  :  BBCNEWS
+Show  :  Talking Movies
+IAShowID  :  BBCNEWS_20190727_123000_Talking_Movies
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190727_123000_Talking_Movies/BBCNEWS_20190727_123000_Talking_Movies.thumbs/BBCNEWS_20190727_123000_Talking_Movies_000027.jpg
+Snippet  :  to persist and spread quite quickly, and endure. arctic fires are common between may and october, but higher temperatures, blamed on climate change, have meant the fires this year have been more intense.
+-----
+Filename :  BBCNEWS.201907.csv
+Score :  5.2147675
+URL  :  https://archive.org/details/BBCNEWS_20190727_030000_BBC_News#start/830/end/865
+MatchDateTime  :  7/27/2019 3:14:05
+Station  :  BBCNEWS
+Show  :  BBC News
+IAShowID  :  BBCNEWS_20190727_030000_BBC_News
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190727_030000_BBC_News/BBCNEWS_20190727_030000_BBC_News.thumbs/BBCNEWS_20190727_030000_BBC_News_000808.jpg
+Snippet  :  quickly, and endure. arctic fires are common between may and october but higher temperatures, blamed on climate change, have meant the fires this year have been more intense. global satellites are now tracking
+-----
+Filename :  BBCNEWS.201902.csv
+Score :  5.210406
+URL  :  https://archive.org/details/BBCNEWS_20190201_000000_Newsday#start/780/end/815
+MatchDateTime  :  2/1/2019 0:13:15
+Station  :  BBCNEWS
+Show  :  Newsday
+IAShowID  :  BBCNEWS_20190201_000000_Newsday
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190201_000000_Newsday/BBCNEWS_20190201_000000_Newsday.thumbs/BBCNEWS_20190201_000000_Newsday_000778.jpg
+Snippet  :  beake, bbc news, yangon. you're watching newsday on the bbc. still to come on the programme: while the us suffers in a polar vortex, australians are suffering the opposite - drought, heatwaves, and bush fires. is the world's weather getting more extreme and is climate change to blame? also on the programme:
+-----
+Filename :  MSNBC.201709.csv
+Score :  5.199462
+URL  :  https://archive.org/details/MSNBCW_20170913_230000_Hardball_With_Chris_Matthews#start/3268/end/3303
+MatchDateTime  :  9/13/2017 23:54:43
+Station  :  MSNBC
+Show  :  Hardball With Chris Matthews
+IAShowID  :  MSNBCW_20170913_230000_Hardball_With_Chris_Matthews
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20170913_230000_Hardball_With_Chris_Matthews/MSNBCW_20170913_230000_Hardball_With_Chris_Matthews.thumbs/MSNBCW_20170913_230000_Hardball_With_Chris_Matthews_003268.jpg
+Snippet  :  out in the pacific northwest they're talking about how hot and dry it has been. in portland, big forest fires, one of the kind they've never seen before. we're going to talk about climate change in this country.
+-----
+Filename :  MSNBC.201909.csv
+Score :  5.1744814
+URL  :  https://archive.org/details/MSNBCW_20190929_020000_All_In_With_Chris_Hayes#start/2158/end/2193
+MatchDateTime  :  9/29/2019 2:36:13
+Station  :  MSNBC
+Show  :  All In With Chris Hayes
+IAShowID  :  MSNBCW_20190929_020000_All_In_With_Chris_Hayes
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20190929_020000_All_In_With_Chris_Hayes/MSNBCW_20190929_020000_All_In_With_Chris_Hayes.thumbs/MSNBCW_20190929_020000_All_In_With_Chris_Hayes_002158.jpg
+Snippet  :  behind me now constantly on the move because of climate change, chris. cal, the scientists you spoke to talked about the fires there. what is the warmth and the heat done to the fire season out there?
+-----
+Filename :  CNN.201909.csv
+Score :  5.1603312
+URL  :  https://archive.org/details/CNNW_20190904_230000_Amy_Klobuchar_Climate_Town_Hall#start/2021/end/2056
+MatchDateTime  :  9/4/2019 23:33:56
+Station  :  CNN
+Show  :  Amy Klobuchar Climate Town Hall
+IAShowID  :  CNNW_20190904_230000_Amy_Klobuchar_Climate_Town_Hall
+IAPreviewThumb  :  https://archive.org/download/CNNW_20190904_230000_Amy_Klobuchar_Climate_Town_Hall/CNNW_20190904_230000_Amy_Klobuchar_Climate_Town_Hall.thumbs/CNNW_20190904_230000_Amy_Klobuchar_Climate_Town_Hall_002008.jpg
+Snippet  :  and people of color. when fires happen they can't move as easily. when heat waves hit they lack a/c to koof op. how do you plan to help communities of colors in times of climate change fuel
+-----
+Filename :  FOXNEWS.201012.csv
+Score :  5.1445637
+URL  :  https://archive.org/details/FOXNEWS_20101228_020000_Hannity#start/2075/end/2110
+MatchDateTime  :  12/28/2010 2:34:50
+Station  :  FOXNEWS
+Show  :  Hannity
+IAShowID  :  FOXNEWS_20101228_020000_Hannity
+IAPreviewThumb  :  https://archive.org/download/FOXNEWS_20101228_020000_Hannity/FOXNEWS_20101228_020000_Hannity.thumbs/FOXNEWS_20101228_020000_Hannity_002064.jpg
+Snippet  :  prove global warming isn't real? is there any weather phenomenon that doesn't prove global warming? it is not used by climate scientist or hawks because it is climate chaos, extremes, drier weather and epic fires
+-----
+Filename :  FOXNEWS.201308.csv
+Score :  5.118571
+URL  :  https://archive.org/details/FOXNEWSW_20130805_020000_Stossel#start/341/end/376
+MatchDateTime  :  8/5/2013 2:05:56
+Station  :  FOXNEWS
+Show  :  Stossel
+IAShowID  :  FOXNEWSW_20130805_020000_Stossel
+IAPreviewThumb  :  https://archive.org/download/FOXNEWSW_20130805_020000_Stossel/FOXNEWSW_20130805_020000_Stossel.thumbs/FOXNEWSW_20130805_020000_Stossel_000315.jpg
+Snippet  :  now the most controversial weather myth. i'm told extreme weather is getting worse because of global warming. none can avoid the devastating impact of raging fires and crippling drought and more powerful storms. raging fires, drought, more powerful storms.
+-----
+Filename :  BBCNEWS.201904.csv
+Score :  5.1074295
+URL  :  https://archive.org/details/BBCNEWS_20190421_150000_BBC_News#start/43/end/78
+MatchDateTime  :  4/21/2019 15:00:58
+Station  :  BBCNEWS
+Show  :  BBC News
+IAShowID  :  BBCNEWS_20190421_150000_BBC_News
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190421_150000_BBC_News/BBCNEWS_20190421_150000_BBC_News.thumbs/BBCNEWS_20190421_150000_BBC_News_000057.jpg
+Snippet  :  who is responsible for the attacks. more than 830 people who were protesting in london about climate change have been arrested by police, 42 have been charged. police in west yorkshire have arrested a number of people in connection with fires burning on ilkley moor.
+-----
+Filename :  FOXNEWS.201902.csv
+Score :  5.088796
+URL  :  https://archive.org/details/FOXNEWSW_20190208_040000_Fox_News__Night_With_Shannon_Bream#start/565/end/600
+MatchDateTime  :  2/8/2019 4:09:40
+Station  :  FOXNEWS
+Show  :  Fox News  Night With Shannon Bream
+IAShowID  :  FOXNEWSW_20190208_040000_Fox_News__Night_With_Shannon_Bream
+IAPreviewThumb  :  https://archive.org/download/FOXNEWSW_20190208_040000_Fox_News__Night_With_Shannon_Bream/FOXNEWSW_20190208_040000_Fox_News__Night_With_Shannon_Bream.thumbs/FOXNEWSW_20190208_040000_Fox_News__Night_With_Shannon_Bream_000567.jpg
+Snippet  :  rob jackson the global project he makes the case for the 'green new deal' in part by saying it makes sense because we are currently paying the cost of climate change today. we separate $306 billion in damages from hurricanes, fires and other possessions in 2017.
+-----
+Filename :  MSNBC.202001.csv
+Score :  5.073544
+URL  :  https://archive.org/details/MSNBCW_20200102_200000_MSNBC_Live_with_Ali_Velshi#start/3488/end/3523
+MatchDateTime  :  1/2/2020 20:58:23
+Station  :  MSNBC
+Show  :  MSNBC Live with Ali Velshi
+IAShowID  :  MSNBCW_20200102_200000_MSNBC_Live_with_Ali_Velshi
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20200102_200000_MSNBC_Live_with_Ali_Velshi/MSNBCW_20200102_200000_MSNBC_Live_with_Ali_Velshi.thumbs/MSNBCW_20200102_200000_MSNBC_Live_with_Ali_Velshi_003479.jpg
+Snippet  :  and dust. a drought has left australia with low drinking water supplies. these extreme weather conditions are a mark of climate change. reporter: ali, the bush fires
+-----
+Filename :  MSNBC.201903.csv
+Score :  5.067224
+URL  :  https://archive.org/details/MSNBCW_20190329_000000_All_In_With_Chris_Hayes#start/1504/end/1539
+MatchDateTime  :  3/29/2019 0:25:19
+Station  :  MSNBC
+Show  :  All In With Chris Hayes
+IAShowID  :  MSNBCW_20190329_000000_All_In_With_Chris_Hayes
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20190329_000000_All_In_With_Chris_Hayes/MSNBCW_20190329_000000_All_In_With_Chris_Hayes.thumbs/MSNBCW_20190329_000000_All_In_With_Chris_Hayes_001497.jpg
+Snippet  :  decided he wants to kick everyone off of preconditions. a president going backwards on climate change when fires are raging and floods are decoming down the midwest. and maybe you should come up with a plan if you can't, the
+-----
+Filename :  MSNBC.201902.csv
+Score :  5.0663247
+URL  :  https://archive.org/details/MSNBCW_20190212_020000_The_Rachel_Maddow_Show#start/2675/end/2710
+MatchDateTime  :  2/12/2019 2:44:50
+Station  :  MSNBC
+Show  :  The Rachel Maddow Show
+IAShowID  :  MSNBCW_20190212_020000_The_Rachel_Maddow_Show
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20190212_020000_The_Rachel_Maddow_Show/MSNBCW_20190212_020000_The_Rachel_Maddow_Show.thumbs/MSNBCW_20190212_020000_The_Rachel_Maddow_Show_002667.jpg
+Snippet  :  getting something done on climate change, which is just literally rekbregressing under trump administration and ice sheets are melting and the fires are raging out in colorado and in california and i will bring those high expectations to the
+-----
+Filename :  MSNBC.201902.csv
+Score :  5.0663247
+URL  :  https://archive.org/details/MSNBCW_20190225_170000_Andrea_Mitchell_Reports#start/1101/end/1136
+MatchDateTime  :  2/25/2019 17:18:36
+Station  :  MSNBC
+Show  :  Andrea Mitchell Reports
+IAShowID  :  MSNBCW_20190225_170000_Andrea_Mitchell_Reports
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20190225_170000_Andrea_Mitchell_Reports/MSNBCW_20190225_170000_Andrea_Mitchell_Reports.thumbs/MSNBCW_20190225_170000_Andrea_Mitchell_Reports_001078.jpg
+Snippet  :  in climate change, and we've talked about today with governors about the fact that we do have real emergencies in our states with forest fires and floods and he continues to do nothing about. so we are hopeful the
+-----
+Filename :  MSNBC.201906.csv
+Score :  5.063112
+URL  :  https://archive.org/details/MSNBCW_20190626_220000_The_Beat_With_Ari_Melber#start/1657/end/1692
+MatchDateTime  :  6/26/2019 22:27:52
+Station  :  MSNBC
+Show  :  The Beat With Ari Melber
+IAShowID  :  MSNBCW_20190626_220000_The_Beat_With_Ari_Melber
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20190626_220000_The_Beat_With_Ari_Melber/MSNBCW_20190626_220000_The_Beat_With_Ari_Melber.thumbs/MSNBCW_20190626_220000_The_Beat_With_Ari_Melber_001648.jpg
+Snippet  :  forest fires have given us the worst quality in the world. we have to make the climate crisis the top priority of the united states. do you pivot if you get a question about something else and that's your priority? you'll run to that issue?
+-----
+Filename :  FOXNEWS.201801.csv
+Score :  5.059689
+URL  :  https://archive.org/details/FOXNEWSW_20180125_010000_Tucker_Carlson_Tonight#start/2583/end/2618
+MatchDateTime  :  1/25/2018 1:43:18
+Station  :  FOXNEWS
+Show  :  Tucker Carlson Tonight
+IAShowID  :  FOXNEWSW_20180125_010000_Tucker_Carlson_Tonight
+IAPreviewThumb  :  https://archive.org/download/FOXNEWSW_20180125_010000_Tucker_Carlson_Tonight/FOXNEWSW_20180125_010000_Tucker_Carlson_Tonight.thumbs/FOXNEWSW_20180125_010000_Tucker_Carlson_Tonight_002577.jpg
+Snippet  :  traveled around the world and seen countless tire fires and progress in downtowns around the world, you can talk -- and this is my point. you can talk all we want about global warming as a threat, but if you're the entire fires go burn in the middle of your city and your flying on a private
+-----
+Filename :  MSNBC.201904.csv
+Score :  5.0573497
+URL  :  https://archive.org/details/MSNBCW_20190430_000000_All_In_With_Chris_Hayes#start/2946/end/2981
+MatchDateTime  :  4/30/2019 0:49:21
+Station  :  MSNBC
+Show  :  All In With Chris Hayes
+IAShowID  :  MSNBCW_20190430_000000_All_In_With_Chris_Hayes
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20190430_000000_All_In_With_Chris_Hayes/MSNBCW_20190430_000000_All_In_With_Chris_Hayes.thumbs/MSNBCW_20190430_000000_All_In_With_Chris_Hayes_002939.jpg
+Snippet  :  valley of california, which is bearing the brunt of climate change consequences. we're going to make sure that those communities, very often low income and communities of color, are able to be lifted up in this plan, to be made more resilient against future fires
+-----
+Filename :  MSNBC.201301.csv
+Score :  5.054081
+URL  :  https://archive.org/details/MSNBCW_20130122_080000_The_Ed_Show#start/387/end/422
+MatchDateTime  :  1/22/2013 8:06:42
+Station  :  MSNBC
+Show  :  The Ed Show
+IAShowID  :  MSNBCW_20130122_080000_The_Ed_Show
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20130122_080000_The_Ed_Show/MSNBCW_20130122_080000_The_Ed_Show.thumbs/MSNBCW_20130122_080000_The_Ed_Show_000376.jpg
+Snippet  :  climate change deniers, daring them to stop progress at this point in time in history. some may still deny the overwhelming judgment of science, but none can avoid the devastating impact of raging fires and crippling drought and more powerful storms. the path towards sustainable energy sources will be long and sometimes difficult, but america
+-----
+Filename :  MSNBC.201905.csv
+Score :  5.045389
+URL  :  https://archive.org/details/MSNBCW_20190514_180000_MSNBC_Live_With_Katy_Tur#start/3524/end/3559
+MatchDateTime  :  5/14/2019 18:58:59
+Station  :  MSNBC
+Show  :  MSNBC Live With Katy Tur
+IAShowID  :  MSNBCW_20190514_180000_MSNBC_Live_With_Katy_Tur
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20190514_180000_MSNBC_Live_With_Katy_Tur/MSNBCW_20190514_180000_MSNBC_Live_With_Katy_Tur.thumbs/MSNBCW_20190514_180000_MSNBC_Live_With_Katy_Tur_003508.jpg
+Snippet  :  scientists believe what is causing the fires is global warming. this year in mexico city alone, there have been 73 days of above average temperatures. this comes as nbc news reports that carbon dioxide levels in the earth's atmosphere have hilt
+-----
+Filename :  BBCNEWS.201907.csv
+Score :  5.0374393
+URL  :  https://archive.org/details/BBCNEWS_20190727_130000_BBC_News#start/1822/end/1857
+MatchDateTime  :  7/27/2019 13:30:37
+Station  :  BBCNEWS
+Show  :  BBC News
+IAShowID  :  BBCNEWS_20190727_130000_BBC_News
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190727_130000_BBC_News/BBCNEWS_20190727_130000_BBC_News.thumbs/BBCNEWS_20190727_130000_BBC_News_001798.jpg
+Snippet  :  to persist and spread quite quickly, and endure. arctic fires are common between may and october but higher temperatures, blamed on climate change, have meant the fires this year have been more intense. global satellites are now tracking
+-----
+Filename :  MSNBC.201901.csv
+Score :  5.0272818
+URL  :  https://archive.org/details/MSNBCW_20190121_110000_Morning_Joe#start/9989/end/10024
+MatchDateTime  :  1/21/2019 13:46:44
+Station  :  MSNBC
+Show  :  Morning Joe
+IAShowID  :  MSNBCW_20190121_110000_Morning_Joe
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20190121_110000_Morning_Joe/MSNBCW_20190121_110000_Morning_Joe.thumbs/MSNBCW_20190121_110000_Morning_Joe_009989.jpg
+Snippet  :  homes. we have people who are not being trained to fight forest fires where we need to train them and my state and other places have been consumed by these forest fires but have been driven by climate change.
+-----
+Filename :  MSNBC.201909.csv
+Score :  5.0178356
+URL  :  https://archive.org/details/MSNBCW_20190913_190000_MSNBC_Live_With_Ali_Velshi#start/2827/end/2862
+MatchDateTime  :  9/13/2019 19:47:22
+Station  :  MSNBC
+Show  :  MSNBC Live With Ali Velshi
+IAShowID  :  MSNBCW_20190913_190000_MSNBC_Live_With_Ali_Velshi
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20190913_190000_MSNBC_Live_With_Ali_Velshi/MSNBCW_20190913_190000_MSNBC_Live_With_Ali_Velshi.thumbs/MSNBCW_20190913_190000_MSNBC_Live_With_Ali_Velshi_002818.jpg
+Snippet  :  and that's catastrophic. but you think about, your book, that is interesting, you divide it into things. so some people will identify climate change with sea level rising. others will identify it with storms. or fires. or drought. or flooding.
+-----
+Filename :  MSNBC.201909.csv
+Score :  5.0178356
+URL  :  https://archive.org/details/MSNBCW_20190929_020000_All_In_With_Chris_Hayes#start/2735/end/2770
+MatchDateTime  :  9/29/2019 2:45:50
+Station  :  MSNBC
+Show  :  All In With Chris Hayes
+IAShowID  :  MSNBCW_20190929_020000_All_In_With_Chris_Hayes
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20190929_020000_All_In_With_Chris_Hayes/MSNBCW_20190929_020000_All_In_With_Chris_Hayes.thumbs/MSNBCW_20190929_020000_All_In_With_Chris_Hayes_002727.jpg
+Snippet  :  in the hills. what's your name and where are you from? i'm from sonoma county, california. do you feel like you have seen climate change up close? definitely. i was completely affected by the california fires. luckily i'm an emergency firefighter.
+-----
+Filename :  BBCNEWS.201904.csv
+Score :  5.012294
+URL  :  https://archive.org/details/BBCNEWS_20190421_143000_Victoria_Derbyshire#start/1846/end/1881
+MatchDateTime  :  4/21/2019 15:01:01
+Station  :  BBCNEWS
+Show  :  Victoria Derbyshire
+IAShowID  :  BBCNEWS_20190421_143000_Victoria_Derbyshire
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190421_143000_Victoria_Derbyshire/BBCNEWS_20190421_143000_Victoria_Derbyshire.thumbs/BBCNEWS_20190421_143000_Victoria_Derbyshire_001827.jpg
+Snippet  :  protesting in london about climate change have been arrested by police, 42 have been charged. police in west yorkshire have arrested a number of people in connection with fires burning on ilkley moor. dozens of firefighters are still dealing with the blaze, which covers six acres.
+-----
+Filename :  BBCNEWS.201904.csv
+Score :  5.012294
+URL  :  https://archive.org/details/BBCNEWS_20190421_180000_BBC_News#start/59/end/94
+MatchDateTime  :  4/21/2019 18:01:14
+Station  :  BBCNEWS
+Show  :  BBC News
+IAShowID  :  BBCNEWS_20190421_180000_BBC_News
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190421_180000_BBC_News/BBCNEWS_20190421_180000_BBC_News.thumbs/BBCNEWS_20190421_180000_BBC_News_000059.jpg
+Snippet  :  in climate change protests in london this week have been arrested by police - 42 have been charged. police in west yorkshire arrest a number of people in connection with fires burning on ilkley moor. dozens of firefighters are still dealing with the blaze covering six acres.
+-----
+Filename :  BBCNEWS.201904.csv
+Score :  5.012294
+URL  :  https://archive.org/details/BBCNEWS_20190421_183000_Sportsday#start/67/end/102
+MatchDateTime  :  4/21/2019 18:31:22
+Station  :  BBCNEWS
+Show  :  Sportsday
+IAShowID  :  BBCNEWS_20190421_183000_Sportsday
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190421_183000_Sportsday/BBCNEWS_20190421_183000_Sportsday.thumbs/BBCNEWS_20190421_183000_Sportsday_000058.jpg
+Snippet  :  more than 830 people, protesting in london about climate change this week, have been arrested by police - 42 were charged. police in west yorkshire have arrested a number of people in connection with fires burning on ilkley moor. dozens of firefighters are still dealing with the blaze,
+-----
+Filename :  BBCNEWS.201907.csv
+Score :  5.003411
+URL  :  https://archive.org/details/BBCNEWS_20190727_070000_Breakfast#start/536/end/571
+MatchDateTime  :  7/27/2019 7:09:11
+Station  :  BBCNEWS
+Show  :  Breakfast
+IAShowID  :  BBCNEWS_20190727_070000_Breakfast
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190727_070000_Breakfast/BBCNEWS_20190727_070000_Breakfast.thumbs/BBCNEWS_20190727_070000_Breakfast_000509.jpg
+Snippet  :  quickly, and endure. arctic fires are common between may and october but higher temperatures, blamed on climate change, have meant the fires this year have been more intense. global satellites are now tracking a swathe of new and ongoing
+-----
+Filename :  BBCNEWS.201909.csv
+Score :  4.987641
+URL  :  https://archive.org/details/BBCNEWS_20190920_230000_BBC_News#start/1037/end/1072
+MatchDateTime  :  9/20/2019 23:17:32
+Station  :  BBCNEWS
+Show  :  BBC News
+IAShowID  :  BBCNEWS_20190920_230000_BBC_News
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190920_230000_BBC_News/BBCNEWS_20190920_230000_BBC_News.thumbs/BBCNEWS_20190920_230000_BBC_News_001018.jpg
+Snippet  :  about climate change has been the fires taking place in the amazon. the brazilian president, jair bolsonaro, is expected to address the issue in a speech to the un general assembly next week. despite government claims the worst is over, fires continue to plague the amazon region of brazil as will grant reports from the state of para.
+-----
+Filename :  BBCNEWS.201907.csv
+Score :  4.969839
+URL  :  https://archive.org/details/BBCNEWS_20190726_180000_BBC_News#start/2740/end/2775
+MatchDateTime  :  7/26/2019 18:45:55
+Station  :  BBCNEWS
+Show  :  BBC News
+IAShowID  :  BBCNEWS_20190726_180000_BBC_News
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190726_180000_BBC_News/BBCNEWS_20190726_180000_BBC_News.thumbs/BBCNEWS_20190726_180000_BBC_News_002727.jpg
+Snippet  :  engulfed in flames. although lightning frequently triggers fires in the region, this year they have been worsened by summer temperatures that are higher than average because of climate change. plumes of smoke from the fires can be seen from space.
+-----
+Filename :  MSNBC.201906.csv
+Score :  4.967801
+URL  :  https://archive.org/details/MSNBCW_20190612_210000_MTP_Daily#start/1369/end/1404
+MatchDateTime  :  6/12/2019 21:23:04
+Station  :  MSNBC
+Show  :  MTP Daily
+IAShowID  :  MSNBCW_20190612_210000_MTP_Daily
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20190612_210000_MTP_Daily/MSNBCW_20190612_210000_MTP_Daily.thumbs/MSNBCW_20190612_210000_MTP_Daily_001348.jpg
+Snippet  :  children. i think if we focus more on the specific issues and our vision of how to get people so that their kids aren't swamped by floods and fires due to climate crisis and give their kids an education, we'll win. that's how we picked up seven
+-----
+Filename :  CNN.201604.csv
+Score :  4.956009
+URL  :  https://archive.org/details/CNNW_20160401_130000_CNN_Newsroom_With_Carol_Costello#start/1700/end/1735
+MatchDateTime  :  4/1/2016 13:28:35
+Station  :  CNN
+Show  :  CNN Newsroom With Carol Costello
+IAShowID  :  CNNW_20160401_130000_CNN_Newsroom_With_Carol_Costello
+IAPreviewThumb  :  https://archive.org/download/CNNW_20160401_130000_CNN_Newsroom_With_Carol_Costello/CNNW_20160401_130000_CNN_Newsroom_With_Carol_Costello.thumbs/CNNW_20160401_130000_CNN_Newsroom_With_Carol_Costello_001677.jpg
+Snippet  :  listen as she fires back at a climate change activist. -- climate change, will you act on your word about fossil fuel money in your campaign? i have money from people who work for fossil fuels.
+-----
+Filename :  CNN.201909.csv
+Score :  4.953753
+URL  :  https://archive.org/details/CNNW_20190905_000000_Joe_Biden_Climate_Town_Hall#start/2131/end/2166
+MatchDateTime  :  9/5/2019 0:35:46
+Station  :  CNN
+Show  :  Joe Biden Climate Town Hall
+IAShowID  :  CNNW_20190905_000000_Joe_Biden_Climate_Town_Hall
+IAPreviewThumb  :  https://archive.org/download/CNNW_20190905_000000_Joe_Biden_Climate_Town_Hall/CNNW_20190905_000000_Joe_Biden_Climate_Town_Hall.thumbs/CNNW_20190905_000000_Joe_Biden_Climate_Town_Hall_002127.jpg
+Snippet  :  now. we had unprecedented rain. in the south we see storms coming through and the western united states, the devastating fires. this is disruptive to people, families, businesses. my question for you is a personal one. how has climate change aif he
+-----
+Filename :  MSNBC.201411.csv
+Score :  4.953678
+URL  :  https://archive.org/details/MSNBCW_20141112_170000_Andrea_Mitchell_Reports#start/1480/end/1515
+MatchDateTime  :  11/12/2014 17:24:55
+Station  :  MSNBC
+Show  :  Andrea Mitchell Reports
+IAShowID  :  MSNBCW_20141112_170000_Andrea_Mitchell_Reports
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20141112_170000_Andrea_Mitchell_Reports/MSNBCW_20141112_170000_Andrea_Mitchell_Reports.thumbs/MSNBCW_20141112_170000_Andrea_Mitchell_Reports_001456.jpg
+Snippet  :  a job. you're from a state which has been suffering more than most from drought, from fires, from the effects of climate change. it's hard to say what is a cause and effect, but certainly the change in climate has had some
+-----
+Filename :  CNN.201912.csv
+Score :  4.9447155
+URL  :  https://archive.org/details/CNNW_20191228_170000_CNN_Newsroom_With_Fredricka_Whitfield#start/3429/end/3464
+MatchDateTime  :  12/28/2019 17:57:24
+Station  :  CNN
+Show  :  CNN Newsroom With Fredricka Whitfield
+IAShowID  :  CNNW_20191228_170000_CNN_Newsroom_With_Fredricka_Whitfield
+IAPreviewThumb  :  https://archive.org/download/CNNW_20191228_170000_CNN_Newsroom_With_Fredricka_Whitfield/CNNW_20191228_170000_CNN_Newsroom_With_Fredricka_Whitfield.thumbs/CNNW_20191228_170000_CNN_Newsroom_With_Fredricka_Whitfield_003417.jpg
+Snippet  :  disasters. we had nearly $10 billion in expenditures going towards natural disasters. hurricanes, floodings, and tragic wild fires. you can't deny they have not measured climate change on these
+-----
+Filename :  BBCNEWS.201911.csv
+Score :  4.9412165
+URL  :  https://archive.org/details/BBCNEWS_20191105_003000_HARDtalk#start/561/end/596
+MatchDateTime  :  11/5/2019 0:39:36
+Station  :  BBCNEWS
+Show  :  HARDtalk
+IAShowID  :  BBCNEWS_20191105_003000_HARDtalk
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20191105_003000_HARDtalk/BBCNEWS_20191105_003000_HARDtalk.thumbs/BBCNEWS_20191105_003000_HARDtalk_000539.jpg
+Snippet  :  can affect us. this gives us no protection in an age of globalisation whether we talk about the fires in california or climate change,
+-----
+Filename :  MSNBC.201909.csv
+Score :  4.918569
+URL  :  https://archive.org/details/MSNBCW_20190921_000000_All_In_With_Chris_Hayes#start/2205/end/2240
+MatchDateTime  :  9/21/2019 0:37:00
+Station  :  MSNBC
+Show  :  All In With Chris Hayes
+IAShowID  :  MSNBCW_20190921_000000_All_In_With_Chris_Hayes
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20190921_000000_All_In_With_Chris_Hayes/MSNBCW_20190921_000000_All_In_With_Chris_Hayes.thumbs/MSNBCW_20190921_000000_All_In_With_Chris_Hayes_002187.jpg
+Snippet  :  uphill. so that tree line you see behind me now constantly on the move because of climate change, chris. the scientists you spoke to talked about the fires there. what is the warmth and the heat done to the fire season out
+-----
+Filename :  BBCNEWS.201811.csv
+Score :  4.9109344
+URL  :  https://archive.org/details/BBCNEWS_20181114_053000_Business_Briefing#start/842/end/877
+MatchDateTime  :  11/14/2018 5:44:17
+Station  :  BBCNEWS
+Show  :  Business Briefing
+IAShowID  :  BBCNEWS_20181114_053000_Business_Briefing
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20181114_053000_Business_Briefing/BBCNEWS_20181114_053000_Business_Briefing.thumbs/BBCNEWS_20181114_053000_Business_Briefing_000837.jpg
+Snippet  :  wired is looking at the fires in california. it says 'this is what the reckoning looks like', saying the deadly blazes are a consequence of climate change. staying with the us,
+-----
+Filename :  FOXNEWS.201902.csv
+Score :  4.90175
+URL  :  https://archive.org/details/FOXNEWSW_20190208_080000_Fox_News__Night_With_Shannon_Bream#start/578/end/613
+MatchDateTime  :  2/8/2019 8:09:53
+Station  :  FOXNEWS
+Show  :  Fox News  Night With Shannon Bream
+IAShowID  :  FOXNEWSW_20190208_080000_Fox_News__Night_With_Shannon_Bream
+IAPreviewThumb  :  https://archive.org/download/FOXNEWSW_20190208_080000_Fox_News__Night_With_Shannon_Bream/FOXNEWSW_20190208_080000_Fox_News__Night_With_Shannon_Bream.thumbs/FOXNEWSW_20190208_080000_Fox_News__Night_With_Shannon_Bream_000567.jpg
+Snippet  :  currently paying the cost of climate change today, we suffer $306 billion in damages from hurricanes, fires and other disasters in 2017, the last year data is available. but how do you answer that? making the assumption the hurricane was caused by carbon in the environment. i don't know -- look.       _
+-----
+Filename :  CNN.201910.csv
+Score :  4.8834543
+URL  :  https://archive.org/details/CNNW_20191026_090000_CNN_Newsroom_Live#start/2126/end/2161
+MatchDateTime  :  10/26/2019 9:35:41
+Station  :  CNN
+Show  :  CNN Newsroom Live
+IAShowID  :  CNNW_20191026_090000_CNN_Newsroom_Live
+IAPreviewThumb  :  https://archive.org/download/CNNW_20191026_090000_CNN_Newsroom_Live/CNNW_20191026_090000_CNN_Newsroom_Live.thumbs/CNNW_20191026_090000_CNN_Newsroom_Live_002128.jpg
+Snippet  :  stop. we'll have the latest on the effort to knock these fires down and save these people's homes. plus, what role does climate change have to play in the fires? we ask an expert from the u.s. national weather service.
+-----
+Filename :  CNN.201301.csv
+Score :  4.8780193
+URL  :  https://archive.org/details/CNNW_20130109_170000_CNN_Newsroom#start/1815/end/1850
+MatchDateTime  :  1/9/2013 17:30:30
+Station  :  CNN
+Show  :  CNN Newsroom
+IAShowID  :  CNNW_20130109_170000_CNN_Newsroom
+IAPreviewThumb  :  https://archive.org/download/CNNW_20130109_170000_CNN_Newsroom/CNNW_20130109_170000_CNN_Newsroom.thumbs/CNNW_20130109_170000_CNN_Newsroom_001815.jpg
+Snippet  :  the opposition said that wasn't legal. the court has ruled. a four-month heat wave in australia has sparked massive bush fires. we will look at how climate change is wreaking havoc down under. stay with us.
+-----
+Filename :  BBCNEWS.201907.csv
+Score :  4.83994
+URL  :  https://archive.org/details/BBCNEWS_20190727_040000_BBC_News#start/819/end/854
+MatchDateTime  :  7/27/2019 4:13:54
+Station  :  BBCNEWS
+Show  :  BBC News
+IAShowID  :  BBCNEWS_20190727_040000_BBC_News
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190727_040000_BBC_News/BBCNEWS_20190727_040000_BBC_News.thumbs/BBCNEWS_20190727_040000_BBC_News_000808.jpg
+Snippet  :  what this means is it's much drier, much warmer, so when there is an ignition, then the fires have been able to persist and spread quite quickly, and endure. arctic fires are common between may and october but higher temperatures, blamed on climate change,
+-----
+Filename :  BBCNEWS.201907.csv
+Score :  4.83994
+URL  :  https://archive.org/details/BBCNEWS_20190726_190000_BBC_News#start/2380/end/2415
+MatchDateTime  :  7/26/2019 19:39:55
+Station  :  BBCNEWS
+Show  :  BBC News
+IAShowID  :  BBCNEWS_20190726_190000_BBC_News
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190726_190000_BBC_News/BBCNEWS_20190726_190000_BBC_News.thumbs/BBCNEWS_20190726_190000_BBC_News_002368.jpg
+Snippet  :  atmosphere monitoring service and he told me about the link between the fires and climate change. it seems in the case of the fires we have been monitoring the last six weeks orso, or so, there is definitely occurring because of the higher temperature is
+-----
+Filename :  FOXNEWS.201903.csv
+Score :  4.792798
+URL  :  https://archive.org/details/FOXNEWSW_20190303_110000_Fox_and_Friends_Sunday#start/5487/end/5522
+MatchDateTime  :  3/3/2019 12:31:42
+Station  :  FOXNEWS
+Show  :  Fox and Friends Sunday
+IAShowID  :  FOXNEWSW_20190303_110000_Fox_and_Friends_Sunday
+IAPreviewThumb  :  https://archive.org/download/FOXNEWSW_20190303_110000_Fox_and_Friends_Sunday/FOXNEWSW_20190303_110000_Fox_and_Friends_Sunday.thumbs/FOXNEWSW_20190303_110000_Fox_and_Friends_Sunday_005459.jpg
+Snippet  :  happened? congressman from texas did show up. we'll ask him about what happened, if climate change falls in the woods but no one is there to hear it, does it still happen? we'll ask it, still ahead. the president fires up the crowd at cpac. what does that say about his
+-----
+Filename :  FOXNEWS.201903.csv
+Score :  4.792798
+URL  :  https://archive.org/details/FOXNEWSW_20190329_030000_Fox_News__Night_With_Shannon_Bream#start/2503/end/2538
+MatchDateTime  :  3/29/2019 3:41:58
+Station  :  FOXNEWS
+Show  :  Fox News  Night With Shannon Bream
+IAShowID  :  FOXNEWSW_20190329_030000_Fox_News__Night_With_Shannon_Bream
+IAPreviewThumb  :  https://archive.org/download/FOXNEWSW_20190329_030000_Fox_News__Night_With_Shannon_Bream/FOXNEWSW_20190329_030000_Fox_News__Night_With_Shannon_Bream.thumbs/FOXNEWSW_20190329_030000_Fox_News__Night_With_Shannon_Bream_002490.jpg
+Snippet  :  in real-time. climate change is something that's really, really hard to quantify and see unless it's affecting you in a dramatic way with hurricanes and fires in areas like that. i hope we can find a way to talk about it productively. shannon: in the meantime democrats of talked about
+-----
+Filename :  MSNBC.201910.csv
+Score :  4.786775
+URL  :  https://archive.org/details/MSNBCW_20191007_210000_MTP_Daily#start/3344/end/3379
+MatchDateTime  :  10/7/2019 21:55:59
+Station  :  MSNBC
+Show  :  MTP Daily
+IAShowID  :  MSNBCW_20191007_210000_MTP_Daily
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20191007_210000_MTP_Daily/MSNBCW_20191007_210000_MTP_Daily.thumbs/MSNBCW_20191007_210000_MTP_Daily_003328.jpg
+Snippet  :  climate change? absolutely. the changing weather patterns have completely changed the way that these fires behave. and, you know, they're seeing things they've never seen before. drea cooper, i look forward to the screening tonight. if you're in the d.c. area,
+-----
+Filename :  MSNBC.201907.csv
+Score :  4.7817597
+URL  :  https://archive.org/details/MSNBCW_20190714_120000_Up_With_David_Gura#start/1569/end/1604
+MatchDateTime  :  7/14/2019 12:26:24
+Station  :  MSNBC
+Show  :  Up With David Gura
+IAShowID  :  MSNBCW_20190714_120000_Up_With_David_Gura
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20190714_120000_Up_With_David_Gura/MSNBCW_20190714_120000_Up_With_David_Gura.thumbs/MSNBCW_20190714_120000_Up_With_David_Gura_001557.jpg
+Snippet  :  it gives power in the senate, to lock in control of our country by the fossil fuel industry. to prevent action against the climate crisis. we're seeing in real-time in the floods and fires in california.
+-----
+Filename :  MSNBC.201903.csv
+Score :  4.7786117
+URL  :  https://archive.org/details/MSNBCW_20190310_210000_PoliticsNation_With_Al_Sharpton#start/1101/end/1136
+MatchDateTime  :  3/10/2019 21:18:36
+Station  :  MSNBC
+Show  :  PoliticsNation With Al Sharpton
+IAShowID  :  MSNBCW_20190310_210000_PoliticsNation_With_Al_Sharpton
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20190310_210000_PoliticsNation_With_Al_Sharpton/MSNBCW_20190310_210000_PoliticsNation_With_Al_Sharpton.thumbs/MSNBCW_20190310_210000_PoliticsNation_With_Al_Sharpton_001079.jpg
+Snippet  :  and being totally ignored by our nation. we have had four decades in which really the status of working people has been level or declining. and the third big crisis, it's the carbon pollution climate crisis. we see big impacts in the northwest with fires, big
+-----
+Filename :  CNN.201912.csv
+Score :  4.777009
+URL  :  https://archive.org/details/CNNW_20191223_080000_CNN_Newsroom_Live#start/1838/end/1873
+MatchDateTime  :  12/23/2019 8:30:53
+Station  :  CNN
+Show  :  CNN Newsroom Live
+IAShowID  :  CNNW_20191223_080000_CNN_Newsroom_Live
+IAPreviewThumb  :  https://archive.org/download/CNNW_20191223_080000_CNN_Newsroom_Live/CNNW_20191223_080000_CNN_Newsroom_Live.thumbs/CNNW_20191223_080000_CNN_Newsroom_Live_001828.jpg
+Snippet  :  for increased action against climate change. he says his government is taking appropriate response to the fires, saying it would be reckless to lower australia's targets for carbon emissions. turkey's president says
+-----
+Filename :  BBCNEWS.201911.csv
+Score :  4.773596
+URL  :  https://archive.org/details/BBCNEWS_20191129_010000_Newsday#start/1819/end/1854
+MatchDateTime  :  11/29/2019 1:30:34
+Station  :  BBCNEWS
+Show  :  Newsday
+IAShowID  :  BBCNEWS_20191129_010000_Newsday
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20191129_010000_Newsday/BBCNEWS_20191129_010000_Newsday.thumbs/BBCNEWS_20191129_010000_Newsday_001798.jpg
+Snippet  :  the government takes climate change seriously. fires have killed at least six people and devastated parts of new south wales and queensland. and these pictures are trending.
+-----
+Filename :  MSNBC.201502.csv
+Score :  4.769357
+URL  :  https://archive.org/details/MSNBCW_20150209_220000_The_Ed_Show#start/127/end/162
+MatchDateTime  :  2/9/2015 22:02:22
+Station  :  MSNBC
+Show  :  The Ed Show
+IAShowID  :  MSNBCW_20150209_220000_The_Ed_Show
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20150209_220000_The_Ed_Show/MSNBCW_20150209_220000_The_Ed_Show.thumbs/MSNBCW_20150209_220000_The_Ed_Show_000105.jpg
+Snippet  :  local newscasts right? if it bleeds it leads, right? you show crime stories and you show fires, because that's what folks watch. it is all about ratings, and climate change is one that is
+-----
+Filename :  BBCNEWS.201908.csv
+Score :  4.760948
+URL  :  https://archive.org/details/BBCNEWS_20190830_180000_BBC_News#start/2134/end/2169
+MatchDateTime  :  8/30/2019 18:35:49
+Station  :  BBCNEWS
+Show  :  BBC News
+IAShowID  :  BBCNEWS_20190830_180000_BBC_News
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190830_180000_BBC_News/BBCNEWS_20190830_180000_BBC_News.thumbs/BBCNEWS_20190830_180000_BBC_News_002128.jpg
+Snippet  :  jaya bolsonaro has banned setting fires. he has faced intense criticism. the amazon which helps to slow down the pace of global warming has seen more than 80000 fires broke out so far this year. right
+-----
+Filename :  BBCNEWS.201904.csv
+Score :  4.7470264
+URL  :  https://archive.org/details/BBCNEWS_20190421_213000_The_Papers#start/87/end/122
+MatchDateTime  :  4/21/2019 21:31:42
+Station  :  BBCNEWS
+Show  :  The Papers
+IAShowID  :  BBCNEWS_20190421_213000_The_Papers
+IAPreviewThumb  :  https://archive.org/download/BBCNEWS_20190421_213000_The_Papers/BBCNEWS_20190421_213000_The_Papers.thumbs/BBCNEWS_20190421_213000_The_Papers_000087.jpg
+Snippet  :  than 960 people protesting in london about climate change this week have been arrested by police, a0 were charged. police in west yorkshire have arrested three men in connection with fires burning on ilkley moor. dozens of firefighters are still dealing with the blaze, which covers six acres. a comedian and actor -  _
+-----
+Filename :  MSNBC.201409.csv
+Score :  4.734455
+URL  :  https://archive.org/details/MSNBCW_20140930_210000_The_Ed_Show#start/1370/end/1405
+MatchDateTime  :  9/30/2014 21:23:05
+Station  :  MSNBC
+Show  :  The Ed Show
+IAShowID  :  MSNBCW_20140930_210000_The_Ed_Show
+IAPreviewThumb  :  https://archive.org/download/MSNBCW_20140930_210000_The_Ed_Show/MSNBCW_20140930_210000_The_Ed_Show.thumbs/MSNBCW_20140930_210000_The_Ed_Show_001366.jpg
+Snippet  :  i got too excited. the number two trender, dry out. drought, drought, drought, climate, drought. climate change. it's so confusing. there has been more than 23000 wild fires in california
+-----
