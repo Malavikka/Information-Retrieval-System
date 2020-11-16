@@ -3,12 +3,12 @@ from spellchecker import SpellChecker
 
 def spell_correct_context(query_str):
     corrector = jamspell.TSpellCorrector()    # Create a corrector
-    corrector.LoadLangModel('/home/malavikka/Desktop/AIR_proj/Information-Retrieval-System/en.bin')  
+    corrector.LoadLangModel('./en.bin')  
     list_of_words = get_list(query_str)
     #PRINTING THE CANDIDATES 
     # for i in range(len(list_of_words)):
-        # print(list_of_words[i]+" -> ", corrector.GetCandidates(list_of_words, i))
-    #print("Did you mean " + "'"+corrector.FixFragment(query_str)+ "'"+"?")
+    #     print(list_of_words[i]+" -> ", corrector.GetCandidates(list_of_words, i))
+    # print("Did you mean " + "'"+corrector.FixFragment(query_str)+ "'"+"?")
     return corrector.FixFragment(query_str)
 
 def spell_correct(query_str):
@@ -22,16 +22,17 @@ def spell_correct(query_str):
     # Get a list of `likely` options
         print(word+' ->',spell.candidates(word))
     print("Did you mean "+"'"+new_str+"'"+"?")
+    return new_str
 
 def get_list(string):
     return string.split()
 
 def main():
     print("With context")
-    spell_correct_context("I am tge begt spell cherken")
+    spell_correct_context("glrbal warming")
     print("\n")
     print("Without context")
-    spell_correct("I am tge begt spell cherken")
+    spell_correct("glrbal warming")
 
 if __name__ == "__main__":
     main()

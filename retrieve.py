@@ -13,7 +13,7 @@ from nltk.stem.porter import PorterStemmer
 from collections import Counter
 import time
 import requests
-#from spell_check import *
+from spell_check import *
 # import nltk
 # nltk.download('stopwords')
 
@@ -319,7 +319,7 @@ def display_metrics(out,scores,d_cosines,orig_query):
             print('--------',file=f)
             ctr+=1
     # call get_elastic_search_results to get urls of top 100 elastic search results
-    es_res,es_time = get_elastic_search_results(orig_query)
+    """ es_res,es_time = get_elastic_search_results(orig_query)
     print("\n-----\nMetrics with comparison to elastic search : ")
     # True Positive is all the files retrieved by both
     TP = len(ir_res.intersection(es_res))
@@ -337,12 +337,15 @@ def display_metrics(out,scores,d_cosines,orig_query):
     print("\nConfusion Matrix :[[TP,FP][FN,TN]]")
     print([[TP,FP],[FN,TN]])
     print("\n-----\nTiming : \n")
-    print("Elastic Search Time : (timed api, value returned by api)",es_time)
+    print("Elastic Search Time : (timed api, value returned by api)",es_time) """
 
 #%%
 def cosine_similarity(k, query):
     start_time = time.time()
-    corrected_query = query
+    # corrected_query = query
+
+    corrected_query = spell_correct_context(query)
+    print('corrected_query:',corrected_query)
     tokens = preprocess(corrected_query)
     print("Cosine Similarity")
     
@@ -378,15 +381,65 @@ def cosine_similarity(k, query):
     print("\nOur Retrieval Time : ",end_time-start_time)
 
 #%%
+def phrase_query(string, standard_inverted_index):
+    tokens = preprocess(string)
+    listOflists = []
+    result = []
+    docs = []
+    for i in tokens:
+        if standard_inverted_index.has_key(i):
+            docsTerm = []
+            ind = list(standard_inverted_index.keys()).index(i)
+            postings = standard_inverted_index_list[ind][1]
+            for j in postings:
+                docsTerm.append(j)
+            docs.append(docsTerm)
+    setted = set(docs[0]).intersection(*docs)
+    # print(len(setted))
+    for filename in setted:
+        temp = []
+        for i in tokens:
+            postingList = standard_inverted_index[i][filename]
+            # print(filename, i , postingList)
+            temp.append(postingList)
+        # print(filename, temp)
+        for i in range(len(temp)):
+            for ind in range(len(temp[i])):
+                temp[i][ind] -= i
+        if set(temp[0]).intersection(*temp):
+            result.append(filename)
+    return result
+
+
+    # print(len(result))
+#%%
+def ranked_phrase_query(query):
+    result = phrase_query(query, standard_inverted_index)
+    print(result)
+    for i in result:
+        # print(row_vector_mapping)
+        query_vec, doc_vec = gen_vec(query,row_vector_mapping[i])
+        c = cosine_similarity(query_vec,doc_vec)
+        print(c)
+
+#%%
+def spell_correct_context(query_str):
+    corrector = jamspell.TSpellCorrector()    # Create a corrector
+    corrector.LoadLangModel('./en.bin')  
+    list_of_words = query_str.split()
+    print('here')
+    #PRINTING THE CANDIDATES 
+    # for i in range(len(list_of_words)):
+    #     print(list_of_words[i]+" -> ", corrector.GetCandidates(list_of_words, i))
+    # print("Did you mean " + "'"+corrector.FixFragment(query_str)+ "'"+"?")
+    return corrector.FixFragment(query_str)
+
+
+#%%
 
 query = input("Enter your Query")
 if '*' not in query:        
     start_time = time.time()
-    # corrected_query = spell_correct_context(query)
-    # print(corrected_query)
-    # corrected_query = query
-    # tokens = preprocess(corrected_query)
-    # cosine_similarity(100,tokens)
     cosine_similarity(100,query)
     end_time = time.time()
 else:
