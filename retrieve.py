@@ -17,27 +17,7 @@ from spell_check import *
 # import nltk
 # nltk.download('stopwords')
 
-#%%
-def preprocess(sentence):
-    cleaned_sentence = []
-    sentence = sentence.lower() # To convert to lowercase
-    sentence = re.sub(r'\d+', '', sentence) # To remove numbers
 
-    translator = str.maketrans('', '', string.punctuation)# To remove punctuations
-    sentence = sentence.translate(translator)
-
-    sentence = " ".join(sentence.split()) # To strip white spaces
-
-    stop_words = set(stopwords.words("english")) # To remove stopwords
-    word_tokens = word_tokenize(sentence) # Tokenize
-    cleaned_sentence = [word for word in word_tokens if word not in stop_words]
-
-    stemmer = PorterStemmer() # Applying porter stemmer
-    cleaned_sentence = [stemmer.stem(word) for word in cleaned_sentence]
-
-    #cleaned_sentence = ' '.join(cleaned_sentence)
-    # print('clean:', cleaned_sentence)
-    return cleaned_sentence
 
 #%%
 # Index for all 417 files together :
@@ -62,7 +42,6 @@ for doc in doc_file_mapping:
 no_of_docs = 0
 for doc in doc_file_mapping:
     df = pd.read_csv("./New_Processed_data/"+doc_file_mapping[doc])
-    # print(doc_file_mapping[doc])
     for row,text in enumerate(df["Snippet"]):
         docID = str(doc)+'_'+str(row)
         row_vector_mapping[docID] = no_of_docs
@@ -76,36 +55,6 @@ for doc in doc_file_mapping:
                     standard_inverted_index[term][docID] = [pos]
             else:
                 standard_inverted_index.update({term:{docID:[pos]}})
-
-#%%
-# Index for all 417 files together (Original) :
-files_list = []
-for i,j,k in walk("./Processed_dataset/"):
-    files_list.extend(k)
-# create document file mappings
-doc_file_mapping = {pos:val for pos,val in enumerate(files_list)}
-# use object-object BTree
-ori_inverted_index = OOBTree()
-# fill index
-row_vector_mapping = {}
-rev_row_vector_mapping = {}
-no_of_docs = 0
-for doc in doc_file_mapping:
-    df = pd.read_csv("./Processed_dataset/"+doc_file_mapping[doc])
-    # print(doc_file_mapping[doc])
-    for row,text in enumerate(df["Snippet"]):
-        docID = str(doc)+'_'+str(row)
-        row_vector_mapping[docID] = no_of_docs
-        rev_row_vector_mapping[no_of_docs] = docID
-        no_of_docs += 1
-        for pos,term in enumerate(text.split()):
-            if ori_inverted_index.has_key(term):
-                if docID in ori_inverted_index[term]:
-                    ori_inverted_index[term][docID].append(pos)
-                else:
-                    ori_inverted_index[term][docID] = [pos]
-            else:
-                ori_inverted_index.update({term:{docID:[pos]}})
 
 # %%
 # generate permuterm index
@@ -138,7 +87,7 @@ for filename in files_list:
 keys = list(standard_inverted_index.keys())
 term_index_map = {j:i for i,j in enumerate(keys)}
 
-docs = {}#np.zeros((no_of_docs, len(standard_inverted_index)))
+docs = {}
 for key,value in standard_inverted_index.items():
     # calculate df
     df = len(value)
@@ -151,123 +100,34 @@ for key,value in standard_inverted_index.items():
             docs[row_vector_mapping[docID]][key] = tf_idf
         else:
             docs[row_vector_mapping[docID]] = {key : tf_idf}
-        #print(key , "TF-IDF Score is : " , tf_idf)
 
-
-    # a set containing all unique files with the key
-    """ file_arr = set()
-    no_of_occurrances = 0
-    for new_key,new_value in value.items():
-        temp_arr = new_key.split("_")
-        file_arr.add(int(temp_arr[0]))
-        no_of_occurrances = no_of_occurrances + len(new_value)
-    no_of_files = len(file_arr)
-    tf = 1 + math.log10(no_of_occurrances)
-    idf = math.log10(417/no_of_files)
-    tf_idf = tf * idf
-    # filling up the tf-idf vectors (D)
-    ind = keys.index(key)
-    # since we have all the file ids with the term we can directly update the tf-idf vectors (D)
-    # -1 because file ids start from 1 to 417
-    for doc in file_arr:
-        D[doc-1][ind] = tf_idf
-    #print(key , "TF-IDF Score is : " , tf_idf)
-    standard_inverted_index[key]["tf-idf"] = tf_idf """
-
-# %%
-# wildcard queries
-def wildcard_query(query):
-    start_time = time.time()
-    splits = query.split('*')
-    # for *X*, finding X* 
-    if query[0] == query[-1] == '*':
-        min_query = splits[1]
-        max_query = splits[1][:-1] + chr(ord(splits[1][-1])+1)
-    # for *X, finding X$* *are,are$ onaz
-    elif query[0] == '*':
-        min_query = splits[1] + '$'
-        max_query = splits[1] + '$' + chr(ord('z')+1)
-    # for X*, finding $X*
-    elif query[-1] == '*':
-        min_query = '$'+ splits[0]
-        max_query = '$' + splits[0][:-1] + chr(ord(splits[0][-1])+1)
-    # for X*Y, finding Y$X*
-    else:
-        min_query = splits[1] + '$' + splits[0]
-        max_query = splits[1] + '$' + splits[0][:-1] + chr(ord(splits[0][-1])+1)
-    words = list(permuterm_index.items(min_query, max_query,excludemax=True))
-    list_of_words = list(map(lambda x: x[1],words))
-    # for i in words:
-    #     print(i[1], 'in', index_tree[i[1]])
-
-    # print(list_of_words)
-
-    tfidf_of_words = []
-    for word in list_of_words:
-        try:
-            for doc in standard_inverted_index[word]:
-                tfidf_of_words.append((doc,docs[row_vector_mapping[doc]][word],word))
-        except:
-            pass
-
-    tfidf_of_words.sort(key = lambda x:(-x[1],x[0]))
-    tfidf_of_words = tfidf_of_words[:15]
-    
-    end_time = time.time()
-
-    print("\nOur Retrieval Time : ",end_time-start_time)
-
-    print("\nTop 15 results : [Ranked on tf-idf scores]")
-    for i,j,k in tfidf_of_words:
-        print("-----")
-        doc,row = map(int,i.split('_'))
-        print("Word: ",k, "\nDocument Name : " , doc_file_mapping[doc],"\nRow Number : ",row,"\ntf-idf Score : ",j)
-        df = pd.read_csv('./Dataset/'+doc_file_mapping[doc])
-        print(df.iloc[row]["Snippet"])
-        print("-----")
-
-    
-    print("\nOur Retrieval Time : ",end_time-start_time)
 
 #%%
+def preprocess(sentence):
+    cleaned_sentence = []
+    sentence = sentence.lower() # To convert to lowercase
+    sentence = re.sub(r'\d+', '', sentence) # To remove numbers
 
-query = input("Enter your Query")
-if '*' not in query:        
-    start_time = time.time()
-    regular_query(100,query)
-    end_time = time.time()
-else:
-    start_time = time.time()
-    wildcard_query(query)
-    end_time = time.time()
+    translator = str.maketrans('', '', string.punctuation) # To remove punctuations
+    sentence = sentence.translate(translator)
 
-print('\nTotal time : [retrieval+metrics]',end_time-start_time)
+    sentence = " ".join(sentence.split()) # To strip white spaces
+
+    stop_words = set(stopwords.words("english")) # To remove stopwords
+    word_tokens = word_tokenize(sentence) # Tokenize
+    cleaned_sentence = [word for word in word_tokens if word not in stop_words]
+
+    stemmer = PorterStemmer() # Applying porter stemmer
+    cleaned_sentence = [stemmer.stem(word) for word in cleaned_sentence]
+
+    return cleaned_sentence
+
 
 #%%
 def cosine_sim(a, b):
     cos_sim = np.dot(a, b)/(np.linalg.norm(a)*np.linalg.norm(b))
     return cos_sim
 
-#%%
-def gen_vector(tokens):
-
-    Q = np.zeros((len(standard_inverted_index)))
-    
-    counter = Counter(tokens)
-    
-    for token in np.unique(tokens):
-        # print("1",token)
-        tf = counter[token]
-        df = len(standard_inverted_index[token])
-        idf = math.log10(no_of_docs/df)
-        if(token in standard_inverted_index):
-            ind = term_index_map[token]
-            Q[ind] = tf * idf
-            print(token)
-        else:
-            pass
-
-    return Q
 
 #%%
 def gen_vec(query,each_doc):
@@ -292,7 +152,6 @@ def gen_vec(query,each_doc):
             doc_vector[i] = docs[each_doc][j]
 
     return query_vector,doc_vector
-
 
 #%%
 
@@ -357,7 +216,7 @@ def display_metrics(out,scores,d_cosines,orig_query):
             print('--------',file=f)
             ctr+=1
     # call get_elastic_search_results to get urls of top 100 elastic search results
-    """ es_res,es_time = get_elastic_search_results(orig_query)
+    es_res,es_time = get_elastic_search_results(orig_query)
     print("\n-----\nMetrics with comparison to elastic search : ")
     # True Positive is all the files retrieved by both
     TP = len(ir_res.intersection(es_res))
@@ -375,48 +234,9 @@ def display_metrics(out,scores,d_cosines,orig_query):
     print("\nConfusion Matrix :[[TP,FP][FN,TN]]")
     print([[TP,FP],[FN,TN]])
     print("\n-----\nTiming : \n")
-    print("Elastic Search Time : (timed api, value returned by api)",es_time) """
+    print("Elastic Search Time : (timed api, value returned by api)",es_time)
 
-#%%
-def regular_query(k, query):
-    start_time = time.time()
-    # corrected_query = query
 
-    corrected_query = spell_correct_context(query)
-    print('corrected_query:',corrected_query)
-    tokens = preprocess(corrected_query)
-    print("Cosine Similarity")
-    
-    print("\nQuery:", corrected_query)
-    print("")
-    #print(tokens)
-    
-    
-    """ query_vector = gen_vector(tokens)
-    print('query_vec:',query_vector)
-    
-    for each_doc in docs: #10^5
-        doc_vec = np.zeros((len(standard_inverted_index)))
-        for term in docs[each_doc]: #10 ^ 1
-            ind = term_index_map[term] #10^
-            doc_vec[ind] = docs[each_doc][term]
-        d_cosines[each_doc] = cosine_sim(query_vector, doc_vec) """
-    
-    d_cosines = np.zeros((no_of_docs))
-
-    for each_doc in docs:
-        query_vector,doc_vec = gen_vec(tokens,each_doc)
-        d_cosines[each_doc] = cosine_sim(query_vector, doc_vec)
-   
-    # out = np.array(d_cosines).argsort()[-k:][::-1]
-    # scores = sorted(np.array(d_cosines))[-k:][::-1]
-    out = np.array(d_cosines).argsort()[::-1]
-    scores = sorted(np.array(d_cosines))[::-1]
-    print("")
-    end_time = time.time()
-    print("Retrieval Time : ",end_time-start_time)
-    display_metrics(out,scores,d_cosines,query)
-    print("\nOur Retrieval Time : ",end_time-start_time)
 
 #%%
 def spell_correct_context(query_str):
@@ -430,6 +250,33 @@ def spell_correct_context(query_str):
     return corrector.FixFragment(query_str)
 
 #%%
+def regular_query(k, query):
+    start_time = time.time()
+    # corrected_query = query
+
+    corrected_query = spell_correct_context(query)
+    print('corrected_query:',corrected_query)
+    tokens = preprocess(corrected_query)
+    
+    print("\nQuery:", corrected_query)
+    print("")
+
+    d_cosines = np.zeros((no_of_docs))
+
+    for each_doc in docs:
+        query_vector,doc_vec = gen_vec(tokens,each_doc)
+        d_cosines[each_doc] = cosine_sim(query_vector, doc_vec)    
+   
+    out = np.array(d_cosines).argsort()[::-1]
+    scores = sorted(np.array(d_cosines))[::-1]
+    print("")
+    end_time = time.time()
+    print("Retrieval Time : ",end_time-start_time)
+    display_metrics(out,scores,d_cosines,query)
+    print("\nOur Retrieval Time : ",end_time-start_time)
+
+
+#%%
 #phrase query
 def phrase_query(tokens, standard_inverted_index):
     result = []
@@ -437,39 +284,31 @@ def phrase_query(tokens, standard_inverted_index):
     for i in tokens:
         if standard_inverted_index.has_key(i):
             docsTerm = []
-            # ind = list(standard_inverted_index.keys()).index(i)
             postings = standard_inverted_index[i]
             for j in postings:
                 docsTerm.append(j)
             docs.append(docsTerm)
     setted = set(docs[0]).intersection(*docs)
-    # print(len(setted))
+
     for filename in setted:
         temp = []
         for i in tokens:
             postingList = standard_inverted_index[i][filename]
-            # print(filename, i , postingList)
             temp.append(postingList)
-        # print(filename, temp)
+
         for i in range(len(temp)):
             for ind in range(len(temp[i])):
                 temp[i][ind] -= i
         if set(temp[0]).intersection(*temp):
             result.append(filename)
     return result
-    # print(len(result))
+
 #%%
 def ranked_phrase_query(query):
     start_time = time.time()
     corrected_query = spell_correct_context(query)
     tokens = preprocess(corrected_query)
     result = phrase_query(tokens, standard_inverted_index)
-    # print(result)
-    # for i in result:
-    #     # print(row_vector_mapping)
-    #     query_vec, doc_vec = gen_vec(tokens, row_vector_mapping[i])
-    #     c = regular_query(query_vec, doc_vec)
-        # print(c)
 
     d_cosines = np.zeros((no_of_docs))
 
@@ -485,25 +324,79 @@ def ranked_phrase_query(query):
     display_metrics(out,scores,d_cosines,query)
     print("\nOur Retrieval Time : ",end_time-start_time)
 
-ranked_phrase_query("global warming")
+# %%
+# wildcard queries
+def wildcard_query(query):
+    start_time = time.time()
+    splits = query.split('*')
+    # for *X*, finding X* 
+    if query[0] == query[-1] == '*':
+        min_query = splits[1]
+        max_query = splits[1][:-1] + chr(ord(splits[1][-1])+1)
+    # for *X, finding X$* *are,are$ onaz
+    elif query[0] == '*':
+        min_query = splits[1] + '$'
+        max_query = splits[1] + '$' + chr(ord('z')+1)
+    # for X*, finding $X*
+    elif query[-1] == '*':
+        min_query = '$'+ splits[0]
+        max_query = '$' + splits[0][:-1] + chr(ord(splits[0][-1])+1)
+    # for X*Y, finding Y$X*
+    else:
+        min_query = splits[1] + '$' + splits[0]
+        max_query = splits[1] + '$' + splits[0][:-1] + chr(ord(splits[0][-1])+1)
+    words = list(permuterm_index.items(min_query, max_query,excludemax=True))
+    list_of_words = list(map(lambda x: x[1],words))
 
+    tfidf_of_words = []
+    for word in list_of_words:
+        try:
+            for doc in standard_inverted_index[word]:
+                tfidf_of_words.append((doc,docs[row_vector_mapping[doc]][word],word))
+        except:
+            pass
+
+    tfidf_of_words.sort(key = lambda x:(-x[1],x[0]))
+    tfidf_of_words = tfidf_of_words[:15]
+    
+    end_time = time.time()
+
+    print("\nOur Retrieval Time : ",end_time-start_time)
+
+    print("\nTop 15 results : [Ranked on tf-idf scores]")
+    for i,j,k in tfidf_of_words:
+        print("-----")
+        doc,row = map(int,i.split('_'))
+        print("Word: ",k, "\nDocument Name : " , doc_file_mapping[doc],"\nRow Number : ",row,"\ntf-idf Score : ",j)
+        df = pd.read_csv('./Dataset/'+doc_file_mapping[doc])
+        print(df.iloc[row]["Snippet"])
+        print("-----")
+
+    
+    print("\nOur Retrieval Time : ",end_time-start_time)
 
 
 
 #%%
 
 query = input("Enter your Query")
-if '*' not in query:        
+if '*' in query:
+    print("Wildcard Query\n")    
+    start_time = time.time()
+    wildcard_query(query)
+    end_time = time.time()
+elif '~' == query[0]:
+    print("Phrase Query\n")    
+    start_time = time.time()
+    ranked_phrase_query(query[1:])
+    end_time = time.time()
+else:
+    print("Regular Query\n")    
     start_time = time.time()
     regular_query(100,query)
     end_time = time.time()
-else:
-    start_time = time.time()
-    res = query_func(permuterm_index, ori_inverted_index, query)
-    end_time = time.time()
 
 print('\nTotal time : [retrieval+metrics]',end_time-start_time)
-
 
 
 # %%
