@@ -36,7 +36,7 @@ def preprocess(sentence):
     cleaned_sentence = [stemmer.stem(word) for word in cleaned_sentence]
 
     #cleaned_sentence = ' '.join(cleaned_sentence)
-    print('clean:', cleaned_sentence)
+    # print('clean:', cleaned_sentence)
     return cleaned_sentence
 
 #%%
@@ -176,34 +176,72 @@ for key,value in standard_inverted_index.items():
 
 # %%
 # wildcard queries
-def query_func(perm_tree, index_tree, query):
+def wildcard_query(query):
+    start_time = time.time()
     splits = query.split('*')
-    # for *X*, finding X*
+    # for *X*, finding X* 
     if query[0] == query[-1] == '*':
         min_query = splits[1]
         max_query = splits[1][:-1] + chr(ord(splits[1][-1])+1)
-        words = list(permuterm_index.items(min_query, max_query))
-    # for *X, finding X$*
+    # for *X, finding X$* *are,are$ onaz
     elif query[0] == '*':
         min_query = splits[1] + '$'
-        max_query = splits[1] + 'z' #value needs updating
-        # print(splits,max_query)
-        words = list(permuterm_index.items(min_query, max_query))
+        max_query = splits[1] + '$' + chr(ord('z')+1)
     # for X*, finding $X*
     elif query[-1] == '*':
         min_query = '$'+ splits[0]
         max_query = '$' + splits[0][:-1] + chr(ord(splits[0][-1])+1)
-        words = list(permuterm_index.items(min_query, max_query))
     # for X*Y, finding Y$X*
     else:
         min_query = splits[1] + '$' + splits[0]
         max_query = splits[1] + '$' + splits[0][:-1] + chr(ord(splits[0][-1])+1)
-        words = list(permuterm_index.items(min_query, max_query))
+    words = list(permuterm_index.items(min_query, max_query,excludemax=True))
     list_of_words = list(map(lambda x: x[1],words))
     # for i in words:
     #     print(i[1], 'in', index_tree[i[1]])
-    return list_of_words
 
+    # print(list_of_words)
+
+    tfidf_of_words = []
+    for word in list_of_words:
+        try:
+            for doc in standard_inverted_index[word]:
+                tfidf_of_words.append((doc,docs[row_vector_mapping[doc]][word],word))
+        except:
+            pass
+
+    tfidf_of_words.sort(key = lambda x:(-x[1],x[0]))
+    tfidf_of_words = tfidf_of_words[:15]
+    
+    end_time = time.time()
+
+    print("\nOur Retrieval Time : ",end_time-start_time)
+
+    print("\nTop 15 results : [Ranked on tf-idf scores]")
+    for i,j,k in tfidf_of_words:
+        print("-----")
+        doc,row = map(int,i.split('_'))
+        print("Word: ",k, "\nDocument Name : " , doc_file_mapping[doc],"\nRow Number : ",row,"\ntf-idf Score : ",j)
+        df = pd.read_csv('./Dataset/'+doc_file_mapping[doc])
+        print(df.iloc[row]["Snippet"])
+        print("-----")
+
+    
+    print("\nOur Retrieval Time : ",end_time-start_time)
+
+#%%
+
+query = input("Enter your Query")
+if '*' not in query:        
+    start_time = time.time()
+    regular_query(100,query)
+    end_time = time.time()
+else:
+    start_time = time.time()
+    wildcard_query(query)
+    end_time = time.time()
+
+print('\nTotal time : [retrieval+metrics]',end_time-start_time)
 
 #%%
 def cosine_sim(a, b):
@@ -296,7 +334,7 @@ def display_metrics(out,scores,d_cosines,orig_query):
     for i,j in zip(out[:15],scores[:15]):
         print("-----")
         doc,row = map(int,rev_row_vector_mapping[i].split('_'))
-        print("Document Name : " , doc_file_mapping[doc],doc,"\nRow Number : ",row,"\nCosine Similarity Score : ",j)
+        print("Document Name : " , doc_file_mapping[doc],"\nRow Number : ",row,"\nCosine Similarity Score : ",j)
         df = pd.read_csv('./Dataset/'+doc_file_mapping[doc])
         print(df.iloc[row]["Snippet"])
         print("-----")
@@ -312,7 +350,7 @@ def display_metrics(out,scores,d_cosines,orig_query):
         doc,row = map(int,rev_row_vector_mapping[i].split('_'))
         ir_res.add(url_map[str(doc)+'_'+str(row)])
         if ctr<100:
-            print("Filename : " , doc_file_mapping[doc],doc,"\nrow_number : ",row,"\ncosine score : ",j,file=f)
+            print("Filename : " , doc_file_mapping[doc],"\nrow_number : ",row,"\ncosine score : ",j,file=f)
             df = pd.read_csv('./Dataset/'+doc_file_mapping[doc])
             for i,j in df.iloc[row].items():
                 print(i,' : ',j,file=f)
@@ -340,7 +378,7 @@ def display_metrics(out,scores,d_cosines,orig_query):
     print("Elastic Search Time : (timed api, value returned by api)",es_time) """
 
 #%%
-def cosine_similarity(k, query):
+def regular_query(k, query):
     start_time = time.time()
     # corrected_query = query
 
@@ -353,7 +391,6 @@ def cosine_similarity(k, query):
     print("")
     #print(tokens)
     
-    d_cosines = np.zeros((no_of_docs))
     
     """ query_vector = gen_vector(tokens)
     print('query_vec:',query_vector)
@@ -365,6 +402,7 @@ def cosine_similarity(k, query):
             doc_vec[ind] = docs[each_doc][term]
         d_cosines[each_doc] = cosine_sim(query_vector, doc_vec) """
     
+    d_cosines = np.zeros((no_of_docs))
 
     for each_doc in docs:
         query_vector,doc_vec = gen_vec(tokens,each_doc)
@@ -381,16 +419,26 @@ def cosine_similarity(k, query):
     print("\nOur Retrieval Time : ",end_time-start_time)
 
 #%%
-def phrase_query(string, standard_inverted_index):
-    tokens = preprocess(string)
-    listOflists = []
+def spell_correct_context(query_str):
+    corrector = jamspell.TSpellCorrector()    # Create a corrector
+    corrector.LoadLangModel('./en.bin')  
+    # list_of_words = query_str.split()
+    #PRINTING THE CANDIDATES 
+    # for i in range(len(list_of_words)):
+    #     print(list_of_words[i]+" -> ", corrector.GetCandidates(list_of_words, i))
+    # print("Did you mean " + "'"+corrector.FixFragment(query_str)+ "'"+"?")
+    return corrector.FixFragment(query_str)
+
+#%%
+#phrase query
+def phrase_query(tokens, standard_inverted_index):
     result = []
     docs = []
     for i in tokens:
         if standard_inverted_index.has_key(i):
             docsTerm = []
-            ind = list(standard_inverted_index.keys()).index(i)
-            postings = standard_inverted_index_list[ind][1]
+            # ind = list(standard_inverted_index.keys()).index(i)
+            postings = standard_inverted_index[i]
             for j in postings:
                 docsTerm.append(j)
             docs.append(docsTerm)
@@ -409,30 +457,37 @@ def phrase_query(string, standard_inverted_index):
         if set(temp[0]).intersection(*temp):
             result.append(filename)
     return result
-
-
     # print(len(result))
 #%%
 def ranked_phrase_query(query):
-    result = phrase_query(query, standard_inverted_index)
-    print(result)
-    for i in result:
-        # print(row_vector_mapping)
-        query_vec, doc_vec = gen_vec(query,row_vector_mapping[i])
-        c = cosine_similarity(query_vec,doc_vec)
-        print(c)
+    start_time = time.time()
+    corrected_query = spell_correct_context(query)
+    tokens = preprocess(corrected_query)
+    result = phrase_query(tokens, standard_inverted_index)
+    # print(result)
+    # for i in result:
+    #     # print(row_vector_mapping)
+    #     query_vec, doc_vec = gen_vec(tokens, row_vector_mapping[i])
+    #     c = regular_query(query_vec, doc_vec)
+        # print(c)
 
-#%%
-def spell_correct_context(query_str):
-    corrector = jamspell.TSpellCorrector()    # Create a corrector
-    corrector.LoadLangModel('./en.bin')  
-    list_of_words = query_str.split()
-    print('here')
-    #PRINTING THE CANDIDATES 
-    # for i in range(len(list_of_words)):
-    #     print(list_of_words[i]+" -> ", corrector.GetCandidates(list_of_words, i))
-    # print("Did you mean " + "'"+corrector.FixFragment(query_str)+ "'"+"?")
-    return corrector.FixFragment(query_str)
+    d_cosines = np.zeros((no_of_docs))
+
+    for each_docID in result:
+        query_vector,doc_vec = gen_vec(tokens,row_vector_mapping[each_docID])
+        d_cosines[row_vector_mapping[each_docID]] = cosine_sim(query_vector, doc_vec)
+
+    out = np.array(d_cosines).argsort()[::-1]
+    scores = sorted(np.array(d_cosines))[::-1]
+    print("")
+    end_time = time.time()
+    print("Retrieval Time : ",end_time-start_time)
+    display_metrics(out,scores,d_cosines,query)
+    print("\nOur Retrieval Time : ",end_time-start_time)
+
+ranked_phrase_query("global warming")
+
+
 
 
 #%%
@@ -440,12 +495,11 @@ def spell_correct_context(query_str):
 query = input("Enter your Query")
 if '*' not in query:        
     start_time = time.time()
-    cosine_similarity(100,query)
+    regular_query(100,query)
     end_time = time.time()
 else:
     start_time = time.time()
     res = query_func(permuterm_index, ori_inverted_index, query)
-    print(res)
     end_time = time.time()
 
 print('\nTotal time : [retrieval+metrics]',end_time-start_time)
