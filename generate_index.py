@@ -13,6 +13,7 @@ from os import walk
 from BTrees.OOBTree import OOBTree
 from collections import deque
 import math
+from spellchecker import SpellChecker
 
 # %%
 # BTree module usage:
@@ -49,6 +50,7 @@ x
 
 # %%
 # Index for all 417 files together :
+my_inverted_index = dict() #
 files_list = []
 for i,j,k in walk("./Processed_dataset/"):
     files_list.extend(k)
@@ -61,6 +63,8 @@ for doc in doc_file_mapping:
     df = pd.read_csv("./Processed_dataset/"+doc_file_mapping[doc])
     print(doc_file_mapping[doc])
     for row,text in enumerate(df["Snippet"]):
+        if(doc not in my_inverted_index): #
+            my_inverted_index[doc] = list() #
         docID = str(doc)+'_'+str(row)
         for pos,term in enumerate(text.split()):
             if standard_inverted_index.has_key(term):
@@ -70,6 +74,17 @@ for doc in doc_file_mapping:
                     standard_inverted_index[term][docID] = [pos]
             else:
                 standard_inverted_index.update({term:{docID:[pos]}})
+                my_inverted_index[doc].append(term) #
+#%%
+#Spell checking on vocab
+terms = list(standard_inverted_index.keys())
+for i in terms:
+    spell = SpellChecker()
+    # find those words that may be misspelled
+    print(spell.correction(i))
+    # Get a list of `likely` options - uncomment 
+    # print(word+' ->', spell.candidates(word))
+    
 
 #%%
 # Cell to calculate the TF-IDF scores.
@@ -79,6 +94,18 @@ for doc in doc_file_mapping:
 def find_no_of_files(arr):
     s = set(arr)
     return len(s)
+
+def normalize_the_score(standard_inverted_index,my_inverted_index):
+    for key,value in my_inverted_index.items():
+        denominator = 0
+        for term in value:
+            term_TfIdf = standard_inverted_index[term]["tf-idf"]
+            term_TfIdf = math.pow(term_TfIdf,2)
+            denominator = denominator + term_TfIdf
+        normalized_denominator = math.sqrt(denominator)
+        for term in value:
+            standard_inverted_index[term]["tf-idf"] = standard_inverted_index[term]["tf-idf"]/normalized_denominator
+            standard_inverted_index[term]["tf-idf"] = round(standard_inverted_index[term]["tf-idf"],5)
 
 for key,value in standard_inverted_index.items():
     file_arr = list()
@@ -94,16 +121,23 @@ for key,value in standard_inverted_index.items():
     #print(key , "TF-IDF Score is : " , tf_idf)
     standard_inverted_index[key]["tf-idf"] = tf_idf
 
+normalize_the_score(standard_inverted_index,my_inverted_index)
+
 #%%
 
 z = list(standard_inverted_index.items())
 z
 
+#vocab = list()
+#for key,value in standard_inverted_index.items():
+#    vocab.append(key)
+#vocab
+
 # %%
 # Permuterm index : 
 #   For each term we add $ and rotate it to create permuterms, and add this into a BTree
 #   Key = Permuterm, value = original term
-#   Eg : term = hello | permuterms = hello$,ello$h,llo$he,lo$hel,o$hell
+#   Eg : term = hello | permuterms = hello$,ello$h,llo$he,lo$hel,o$hell,$hello
 
 # %%
 # for a single document
@@ -120,7 +154,7 @@ for text in df["Snippet"]:
             # add all permuterms in a dictionary to point to term
             d = {}
             # method 1 : list splicing
-            for i in range(x):
+            for i in range(x+1):
                 d[permuterm] = term
                 permuterm = permuterm[1:]+permuterm[0]
             # method 2 : deque rotations 
@@ -151,7 +185,7 @@ for filename in files_list:
                 # add all permuterms in a dictionary to point to term
                 d = {}
                 # method 1 of generating permuterms
-                for i in range(x):
+                for i in range(x+1):
                     d[permuterm] = term
                     permuterm = permuterm[1:]+permuterm[0]
                 # method 2 of generating permuterms
@@ -170,4 +204,41 @@ x
     
 # %%
 # todo : time the method 1 and 2 of permuterm generation and see which is faster... By general overview, both seem to more or less take the same time.
+
+# %%
+# wildcard queries
+def query_func(perm_tree, index_tree, query):
+    if '*' not in query:
+        return [query]
+    splits = query.split('*')
+    # for *X*, finding X*
+    if query[0] == query[-1] == '*':
+        min_query = splits[1]
+        max_query = splits[1][:-1] + chr(ord(splits[1][-1])+1)
+        words = list(permuterm_index.items(min_query, max_query))
+        return words
+    # for *X, finding X$*
+    elif query[0] == '*':
+        min_query = splits[1] + '$'
+        max_query = splits[1] + 'z' #value needs updating
+        # print(splits,max_query)
+        words = list(permuterm_index.items(min_query, max_query))
+        return words
+    # for X*, finding $X*
+    elif query[-1] == '*':
+        min_query = '$'+ splits[0]
+        max_query = '$' + splits[0][:-1] + chr(ord(splits[0][-1])+1)
+        words = list(permuterm_index.items(min_query, max_query))
+        return words
+    # for X*Y, finding Y$X*
+    else:
+        min_query = splits[1] + '$' + splits[0]
+        max_query = splits[1] + '$' + splits[0][:-1] + chr(ord(splits[0][-1])+1)
+        words = list(permuterm_index.items(min_query, max_query))
+        return words
+
+
+query_func(permuterm_index, index, 'h*ful')
+
+
 # %%

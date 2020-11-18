@@ -4,9 +4,11 @@ import numpy as np
 import string
 import os 
 import nltk
+# nltk.download('wordnet')
 # nltk.download('stopwords') Run this line only the first time you run the script because it needs to download the stopwords. Comment for later runs.
 from nltk.corpus import stopwords
 from nltk.stem.snowball import SnowballStemmer
+from nltk.stem import WordNetLemmatizer
 
 # %%
 
@@ -21,10 +23,12 @@ def clean_the_string(sentence):
     sentence = sentence.split()
 
     # removing stop words and Stemming the remaining words
-    stemmer = SnowballStemmer("english")
+    #stemmer = SnowballStemmer("english")
+    lemmatizer = WordNetLemmatizer()
     for word in sentence:
         if word not in stopwords.words('english'):# and not word.isdigit(): => Check if we need to include this condition. If we remove all digits then queries supplied by users like "What was the averaga temperature in june" can't be addressed
             #word = stemmer.stem(word)
+            word = lemmatizer.lemmatize(word)
             cleaned_sentence.append(word.lower()) # Converting everything to lower case for uniformity
 
     cleaned_sentence = ' '.join(cleaned_sentence)
@@ -40,7 +44,7 @@ for file in os.listdir(directory):
         print("Filename : " , filename)
         df = pd.read_csv('./Dataset/' + filename, index_col=None)
         df.drop(columns = ['URL', 'MatchDateTime', 'IAShowID', 'IAPreviewThumb'], inplace = True)
-        df.head()
+        #df.head()
         # Iterating over every row of the "Snippet" column and pre-processing it.
         for i in range(len(df['Snippet'])):
             df['Snippet'][i] = clean_the_string(df['Snippet'][i])
